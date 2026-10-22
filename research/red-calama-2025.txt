@@ -1,0 +1,1741 @@
+                          INFORME TÉCNICO
+   CUMPLIMIENTO DE NORMA DE CALIDAD DEL AIRE POR
+
+                    MP10, MP2,5, SO2 Y PLOMO
+
+             RED DE CALIDAD DEL AIRE DE CALAMA
+                     REGIÓN DE ANTOFAGASTA
+
+SECCIÓN DE CALIDAD DEL AIRE Y EMISIONES ATMOSFÉRICAS
+
+                    DIVISIÓN DE FISCALIZACIÓN
+
+                         DFZ-2025-553-II-NC
+
+                               MAYO 2025
+
+Nombre                                                                            Firma
+
+Aprobado Juan Pablo Rodríguez
+
+Revisado Isabel Leiva Campos
+
+Elaborado Karin Salazar N.
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+      TABLA DE CONTENIDOS
+
+Tema                       Página
+
+1. RESUMEN EJECUTIVO.................................................................................................................. 2
+
+2. INTRODUCCIÓN ........................................................................................................................... 6
+
+3. OBJETIVOS ................................................................................................................................... 7
+
+4. ALCANCE...................................................................................................................................... 7
+
+5. EVALUACIÓN DE VALIDEZ DE LOS DATOS ................................................................................... 8
+   5.1. Estaciones declaradas como EMRP-MP10, EMRP-MP2,5 y SO2.......................................... 8
+
+5.2. Descripción de instrumentos de medición Red de Calama............................................... 10
+
+5.3. Auditoría de datos............................................................................................................. 11
+
+6. RESULTADOS DEL ANÁLISIS DE LA NORMA............................................................................... 16
+   6.1. Evaluación de la norma para MP10 .................................................................................. 16
+
+6.1.1. Evaluación de la norma 24 horas para MP10 ......................................................... 16
+
+6.1.2. Evaluación de la norma anual para MP10............................................................... 17
+
+6.2. Evaluación de la norma para MP2,5 ................................................................................. 19
+
+6.2.1. Evaluación de la norma 24 horas para MP2,5 ........................................................ 19
+
+6.2.2. Evaluación de la norma anual para MP2,5.............................................................. 20
+
+6.3. Evaluación de la norma primaria SO2................................................................................ 21
+
+6.3.1. Evaluación de la norma primaria de 1 hora SO2 ..................................................... 21
+
+6.3.2. Evaluación de la norma primaria 24 horas SO2....................................................... 24
+
+6.3.3. Evaluación de la norma primaria anual SO2............................................................ 26
+
+6.4. Evaluación de la norma primaria de plomo (Pb)............................................................... 28
+
+6.4.1. Evaluación de la norma anual de plomo (Pb) ......................................................... 28
+
+7. CONCLUSIONES ......................................................................................................................... 30
+
+8. ANEXOS ..................................................................................................................................... 33
+
+                                                                                                                                               1
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+               1. RESUMEN EJECUTIVO
+
+                 El presente documento da cuenta de la evaluación del cumplimiento de las normas de calidad del
+                 aire para material particulado respirable MP10, material particulado fino respirable MP2,5
+                 contenidas en el D.S. N° 12/2022 y D.S. N° 12/2011 respectivamente, ambas del Ministerio del
+                 Medio Ambiente; norma primaria para SO2, contenida en el D.S. N° 104/2018 del Ministerio de
+                 Medio Ambiente; además de la norma primaria de Plomo, contenida en el D.S. N° 136/2000 del
+                 Ministerio Secretaria General de la Presidencia. Cabe señalar que, el presente informe de
+                 fiscalización incluye información de la evaluación de los datos de MP2,5, SO2, y Plomo, a pesar de
+                 que los contaminantes no se encuentran incluido en el Decreto Supremo N° 57/2009, del
+                 MINSEGPRES.
+
+                 Lo anterior de acuerdo con lo establecido en el Artículo 16° del párrafo ll, de la Ley Orgánica de la
+                 Superintendencia del Medio Ambiente: “Corresponderá a la Superintendencia del Medio Ambiente,
+                 fiscalizar el cumplimiento de las normas de calidad y normas de emisión de cada región, incluida la
+                 Metropolitana.”
+
+                 La actividad de fiscalización de la norma primaria de calidad del aire corresponde a un examen de
+                 información para MP10 y MP2,5, donde se consideró los datos auditados en los informes DFZ-2023-
+                 188-II-NC y DFZ-2024-211-II-NC, los cuales incluyen el análisis de la norma de calidad del aire para
+                 el contaminante MP10 y MP2,5 para los años 2022 y 2023, respectivamente; utilizando los datos
+                 validados proporcionados por el titular CODELCO. A dichos datos se realizó una auditoría para la
+                 validación de los datos enviados por el titular, correspondientes a los datos registrados el año 2024
+                 para MP10 y MP2,5, de las estaciones de monitoreo calificadas como de representatividad
+                 poblacional (EMRP) para MP10 y MP2,5. Complementariamente se incluyó una auditoría para la
+                 validación de los datos enviados por el titular, correspondientes a los datos registrados los años
+                 2022, 2023 y 2024 para SO2 y Plomo. Las 4 estaciones declaradas como EMRP por MP10 y MP2,5,
+                 corresponden a: Hospital El Cobre, Colegio Pedro Vergara Keller (en adelante CPVK), Club Deportivo
+                 23 de Marzo (en adelante CD 23 de Marzo) y Centro. La estación declarada como EMRP por SO2
+                 corresponde a Hospital El Cobre.
+
+                 Cabe señalar que mediante Decreto Supremo N° 57, del 20 de abril de 2009, del Ministerio de la
+                 Secretaría General de la Presidencia, la comuna de Calama fue declarada zona saturada por material
+                 particulado respirable MP10, como concentración anual.
+
+                 Posteriormente, mediante Decreto Supremo N°5 de fecha 29 de enero de 2021, del Ministerio de
+                 Medio Ambiente, se estableció el Plan de Descontaminación Atmosférica para la ciudad de Calama
+                 y su zona circundante. Se debe señalar que, el 7 de junio de 2023 el tribunal ambiental ordenó al
+                 MMA anular el Plan Descontaminación Atmosférico para la Ciudad de Calama y su Área Circundante.
+                 El órgano jurisdiccional también estableció que se debe realizar un nuevo estudio con los datos de
+
+                                                                                                                                               2
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 las estaciones de monitoreo que representen correctamente a la totalidad de la población de
+                 Calama y que se disponga de las medidas necesarias que atiendan a mejorar su realidad atmosférica.
+
+                 El análisis de datos de MP10, MP2,5, SO2 y Pb, se realizó con las mediciones correspondientes al
+                 periodo comprendido entre el 1° de enero de 2022 y el 31 de diciembre de 2024, periodo durante
+                 el cual, las mediciones de las estaciones de monitoreo se realizaron utilizando instrumentos de
+                 medición con aprobación EPA.
+
+                 Para la auditoría de los datos se consideraron los criterios establecidos en las normas primarias de
+                 calidad del aire para MP10, MP2,5, SO2 y Pb, y lo establecido la “Instrucción requisitos técnicos para
+                 la instalación, funcionamiento y operación de los instrumentos en estaciones de muestreo y
+                 medición de calidad del aire y meteorología”, R.E. N°1.449/2023 de la SMA. Para el cálculo del
+                 promedio diario en equipos de tipo gravimétrico, en el caso del MP10 y MP2,5, se utilizó como
+                 criterio lo dispuesto en el decreto antes mencionado, que establece el cálculo diario sobre la base
+                 de 18 horas continuas de medición. En el caso del SO2 se utilizó como criterio, para el cálculo del
+                 promedio anual las concentraciones mensuales y para el promedio de 24 horas los promedios
+                 horarios, de acuerdo con los criterios establecidos en la norma de SO2.
+
+                 Norma de calidad del aire para MP10
+
+                 La evaluación de la norma de 24 horas de MP10, y que fija como límite un valor de 130 μg/m3N
+                 (dicho límite rige desde el año 2022), se determinó mediante el análisis y el cálculo del percentil 98,
+                 que la norma de 24 horas no fue superada y las concentraciones obtenidas estuvieron por debajo
+                 del 80% del límite de la norma de 24 horas para los años 2022, 2023 y 2024. Cabe señalar que, para
+                 el año 2022 las concentraciones obtenidas, mediante el cálculo del percentil 98, fueron las
+                 siguientes: 81 µg/m3N en la estación CPVK, 78 µg/m3N en la estación CD 23 de Marzo, 59 µg/m3N en
+                 la estación Centro y 55 µg/m3N en la estación Hospital El Cobre. Por otra parte, para en el año 2023
+                 las concentraciones obtenidas, mediante el cálculo del percentil 98, fueron las siguientes:
+                 94 µg/m3N en la estación CPVK, 77 µg/m3N en la estación CD 23 de Marzo, 60 µg/m3N en la estación
+                 Centro y 50 µg/m3N en la estación Hospital El Cobre. Finalmente, para el año 2024 las
+                 concentraciones obtenidas corresponden a: 78 µg/m3N en la estación CPVK, 68 µg/m3N en la
+                 estación CD 23 de Marzo, 54 µg/m3N en la estación Centro y 47 µg/m3N en la estación Hospital El
+                 Cobre.
+
+                 Respecto de la norma anual de MP10 que establece como límite una concentración de 50 μg/m3N,
+                 mediante el cálculo del promedio tres años (2022, 2023 y 2024), se determinó que la norma anual
+                 fue superada en la estación Club Deportivo 23 de Marzo con una concentración de 53 µg/m3N,
+                 equivalente al 106% del límite de la norma anual y en la estación CPVK, con una concentración como
+                 promedio tres años de 51 µg/m3N, correspondiente a un 102%, del límite de la norma anual. En el
+                 resto de las estaciones las concentraciones obtenidas se encontraron por debajo del 80% del límite
+                 de la norma anual.
+
+                                                                                                                                               3
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 Norma primaria de calidad del aire para MP2,5
+
+                 El análisis de la norma de MP2,5 de 24 horas, que establece como límite una concentración de
+                 50 μg/m3, concluyó que los valores correspondientes al percentil 98 de las concentraciones 24 horas
+                 en todas las estaciones no superaron el límite de 50 µg/m3 en los años 2022, 2023 y 2024. Cabe
+                 señalar que, para el año 2024 las concentraciones obtenidas, mediante el cálculo del percentil 98,
+                 fueron las siguientes: 18 µg/m3 en la estación CPVK, 16 µg/m3 en estación Centro, 14 µg/m3 en
+                 estación CD 23 de Marzo y 13 µg/m3 en la estación Hospital El Cobre, las concentraciones obtenidas
+                 en todas las estaciones se encontraron por debajo del 36% del límite de la norma de 24 horas.
+
+                 En relación con la evaluación de la norma anual para MP2,5, mediante el cálculo del promedio de
+                 tres años de las concentraciones, entre el año 2022 y el año 2024, se concluyó que la norma no fue
+                 superada en las estaciones de la Red de Calama, respecto del límite establecido de 20 μg/m3, y
+                 tampoco el 80% del límite de la norma. Las concentraciones obtenidas como promedio anual fueron
+                 de: 12 µg/m3 para la estación de CPVK, 11 µg/m3 para la estación CD 23 de Marzo, 10 µg/m3 en
+                 estación Centro y 9 µg/m3 en estación Hospital El Cobre.
+
+                 Norma primaria de calidad del aire para SO2
+
+                 La evaluación de la norma primaria de 1 hora de SO2, que establece como límite 134 ppbv
+                 (350 µg/m3N), mediante el cálculo del promedio aritmético del percentil 99 de tres años calendario
+                 sucesivos, entre el año 2022 y el año 2024, se determinó que la norma primaria horaria no fue
+                 superada, registrando 9,80 ppbv, correspondiente al 7% del valor límite de la norma horaria.
+                 Respecto al análisis de los valores obtenidos del cálculo del percentil 99 de las concentraciones de
+                 1 hora, para cada uno de los años del periodo analizado, establece que la norma se considerará
+                 sobrepasada si fuere mayor o igual al doble del valor de la norma, bajo esta segunda condición (b)
+                 la estación no presenta superación.
+
+                 Complementariamente, se determina el número de días de excedencias a la norma de 1 hora de SO2
+                 para la estación, para los años 2022, 2023 y 2024, considerando el valor límite de 134 ppbv,
+                 resultando solamente un número de dos (2) excedencias a la norma de 1 hora en el año 2024 en la
+                 estación Hospital El Cobre.
+
+                 Por otra parte, la evaluación de la norma primaria de SO2, de 24 horas, que establece como límite
+                 de 57 ppbv (150 µg/m3N), determinó que la norma no fue superada y tampoco el 80% del valor
+                 límite de la norma de 24 horas. La concentración observada en la estación Hospital El Cobre como
+                 concentración promedio tres años fue de 4,38 ppbv, equivalente al 8% del valor límite de la norma
+                 de 24 horas. Respecto del análisis en un año calendario, la norma señala que podrá considerarse
+                 superada si la concentración determinada mediante el percentil 99 fuere mayor o igual al doble del
+
+                                                                                                                                               4
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 valor de la norma, de acuerdo con esta segunda condición (b) la norma de 24 horas no fue superada
+                 durante el periodo en estudio.
+                 Respecto de la norma anual, al analizar el período comprendido entre el día 1° de enero de 2022 y
+                 el día 31 de diciembre de 2024, cuyo límite de la norma anual es de 23 ppbv (60 µg/m3N) como
+                 promedio tres años de tres años consecutivos, se determinó que la norma anual no fue superada. La
+                 estación Hospital El Cobre tuvo una concentración promedio tres años de 1,18 ppbv, equivalente al
+                 5% del valor límite de la norma anual. La evaluación realizada para un año calendario que señala
+                 que se considera sobrepasada si fuere mayor o igual al doble del valor de la norma, tanto para el
+                 año 2022, 2023, como el año 2024 no presentó superación para la segunda condición (b) descrita.
+                 Norma primaria de calidad del aire para Pb
+                 La revisión de la norma primaria de calidad del aire para plomo se realizó en base al periodo
+                 comprendido entre el 1°de enero de 2023 y el 31 de diciembre de 2024, considerándose válida la
+                 información generada de las mediciones de MP10 y la determinación de las concentraciones de
+                 plomo en filtros de MP10. Del análisis efectuado se pudo determinar lo siguiente:
+                 El número de los análisis químicos de plomo en filtros de MP10 es igual o superior al 70% mensual
+                 que exige la norma, por tanto, la información proporcionada por los propietarios de las estaciones
+                 cumplió con el número de concentraciones válidas para la evaluación de plomo en filtros de MP10.
+                 Del resultado de la evaluación de la norma anual de plomo, que fija como límite 0,5 µg/m3N, se
+                 verificó que las concentraciones obtenidas en las estaciones de la Red en estudio no superaron la
+                 norma anual de plomo encontrándose valores por debajo del 80% de la norma.
+
+                                                                                                                                               5
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+               2. INTRODUCCIÓN
+
+                 Considerando lo establecido en el artículo 16°, del Título ll de la Ley Orgánica de la Superintendencia
+                 del Medio Ambiente, corresponderá a esta Superintendencia fiscalizar el cumplimiento de las
+                 normas de calidad. Para lo anterior, la Superintendencia realizó una auditoría y análisis de los datos
+                 remitidos para los años 2022, 2023 y 2024, con el fin de obtener información válida que permita
+                 evaluar la norma primaria de calidad del aire de MP10 y MP2,5. Cabe señalar que los informes DFZ-
+                 2023-188-II-NC y DFZ-2024-211-II-NC, incluyen el análisis de la norma de calidad del aire para MP10
+                 y MP2,5 para los años 2022 y 2023 respectivamente, emitidos por la Superintendencia del Medio
+                 Ambiente, conteniendo la auditoría y validación de los datos generados durante esos años para
+                 dichos contaminantes. Además, el informe de fiscalización incluye información de la evaluación de
+                 los datos de SO2 y Pb, a pesar de que no se encuentran incluido en el Decreto Supremo N° 57/2009,
+                 del MINSEGPRES.
+
+                 La actividad de fiscalización de la norma primaria de calidad del aire para MP10, MP2,5, SO2 y Pb, se
+                 enmarca en el programa de fiscalización de normas de calidad ambiental de la SMA para el año
+                 2025.
+
+                 Cabe señalar que, la Superintendencia del Medio Ambiente durante el mes de mayo de 2018 realizó
+                 inspecciones a las estaciones de monitoreo de la Red de Calama, con el objeto de evaluar o reevaluar
+                 la representatividad poblacional de dichas estaciones para los contaminantes MP10 y MP2,5. La
+                 evaluación de la red concluyó que cuatro de las seis estaciones evaluadas cumplían con los criterios
+                 establecidos en las normas primarias de MP10 y MP2,5; D.S. N° 59/1998 de la SEGPRES (cuya última
+                 modificación corresponde al D.S. N° 12/2022 del MMA), y el D.S. N° 12/2011 del MMA,
+                 respectivamente. Además de cumplir con los criterios establecidos en la R.E. N° 744/2017 SMA para
+                 MP10 y con aquellos establecidos en la R.E. N° 106/2013 SMA para MP2,5. Las estaciones que fueron
+                 calificadas como EMRP por MP10 y EMRP por MP2,5 corresponden a: Hospital El Cobre, Colegio
+                 Pedro Vergara Keller (CPVK en adelante), Club Deportivo 23 de Marzo y Centro.
+
+                 Por lo expuesto anteriormente, se realizó un análisis de la validez de las mediciones de MP10 y
+                 MP2,5 para el periodo comprendido entre el año 2022 y el año 2024, y cuyos antecedentes fueron
+                 solicitados mediante las Resoluciones Exenta N°925/2015 y N°819/2017, ambas de la SMA. La
+                 información solicita fue remitida por el titular para estaciones de: Hospital El Cobre, CPVK, CD 23 de
+                 Marzo y Centro, las que cuentan con calificación de representatividad poblacional (EMRP en
+                 adelante) por MP10 y MP2,5. Cabe señalar que además se analiza la validez de las mediciones de
+                 SO2 para el periodo comprendido entre el año 2022 y el año 2024.
+
+                 Para el proceso de auditoría y análisis de los datos se consideró la verificación del cumplimiento
+                 normativo de las normas primarias de MP10, MP2,5, SO2 y Pb, y el cumplimiento de las exigencias
+                 establecidas en la “Instrucción requisitos técnicos para la instalación, funcionamiento y operación
+
+                                                                                                                                               6
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 de los instrumentos en estaciones de muestreo y medición de calidad del aire y meteorología”, R.E.
+                 N°1.449/2023 de la SMA.
+
+                 Estos antecedentes permitirán al Ministerio del Medio Ambiente activar los instrumentos de política
+                 pública que correspondan, de acuerdo con lo establecido en la Resolución Exenta N°503 de 2 de
+                 junio de 2021, del Subsecretario del Medio Ambiente, complementa circular N°0001, de 2005, de la
+                 comisión nacional del medio ambiente, que instruye sobre procedimiento para la declaración,
+                 modificación y derogación de zonas saturadas o latentes de carácter atmosférico, y deja sin efecto
+                 la resolución exento N°302, de 2011, y N°1121, de 2020, ambas del Ministerio del Medio Ambiente.
+
+               3. OBJETIVOS
+
+                 El objetivo general de la presente actividad consistió en evaluar el cumplimiento de las normas de
+                 calidad del aire primaria para MP10, MP2,5 y Pb, en su nivel diario y anual, según corresponda,
+                 además de la norma de calidad del aire primaria para SO2 en su nivel horario, diario y anual;
+                 considerando el período de información comprendido entre el 1° de enero de 2022 y el 31 de
+                 diciembre de 2024, en las estaciones que cuentan con representatividad poblacional para material
+                 particulado por MP10, MP2,5 y SO2.
+
+                 Por lo anterior, se determinó la validez de las mediciones de MP10, MP2,5, SO2 y Pb, realizadas por
+                 la Red de vigilancia de calidad del aire de Calama, en base a una auditoría de los datos del año 2024,
+                 para los años 2022 y 2023 se utilizaron los datos validos de los informes DFZ-2023-188-II-NC y DFZ-
+                 2024-211-II-NC.
+
+               4. ALCANCE
+
+                 Los datos validados por esta Superintendencia en el presente informe corresponden a los registros
+                 de MP10, MP2,5, SO2 y Pb, de la Red de monitoreo de Calama, para el periodo comprendido entre
+                 el 1° de enero de 2022 y el 31 de diciembre de 2024.
+
+                 Las estaciones utilizadas para la evaluación de datos de MP10 y MP2,5, que cumplen con ser
+                 estaciones con EMRP para MP10 y MP2,5 son: Hospital El Cobre, CPVK, CD 23 de Marzo y Centro. La
+                 estación declarada como EMRP por SO2 corresponde a Hospital El Cobre.
+
+                 El presente informe técnico evaluó el cumplimiento de las normas primarias de calidad vigentes
+                 para el periodo evaluado entre el 1° de enero de 2022 y el 31 de diciembre de 2024. A continuación,
+                 en la Tabla 1 se muestran los valores límite a nivel diario y anual, por contaminante y cuerpo
+                 normativo:
+
+                                                                                                                                               7
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+             Tabla 1 Normas de calidad del aire vigente a nivel horario, diario y anual
+
+Norma                                 Contaminante  Límite     Límite                      Límite
+
+                                                    Concentración Horaria Concentración 24 horas Concentración Anual
+
+D.S. N° 12/2022, del Ministerio del   MP10          No aplica  130 μg/m3N                  50 μg/m3N
+Medio Ambiente.                       MP2,5
+                                                    No aplica  50 μg/m3                    20 μg/m3
+D.S. N° 12/2011 del Ministerio del     SO2
+Medio Ambiente.                         Pb          134 ppbv (350 μg/m3N) 57 ppbv (150 μg/m3N) 23 ppbv (60 μg/m3N)
+                                                                                                                      (promedio 3 años)
+D.S. N° 104/2018 del Ministerio de
+Medio Ambiente                                      No aplica  No aplicz                   0,5 μg/m3N
+
+D.S. N ° 136/2000 del Ministerio
+Secretaria General de la Presidencia
+de la República.
+
+5. EVALUACIÓN DE VALIDEZ DE LOS DATOS
+
+La información de las mediciones para los años 2022, 2023 y 2024, fue remitida por el titular
+responsable de la Red de Calama, los antecedentes fueron solicitados mediante las Resoluciones
+Exenta N°925/2015 y N° 819/2017 de la SMA. La información de calidad del aire recepcionada
+corresponde a los datos crudos (diario o minutos), datos validados (diario o horarios) y sus
+respectivos códigos de invalidación. Adicionalmente, el titular remitió las calibraciones y
+mantenciones realizadas a los instrumentos de medición durante el periodo de evaluación del
+presente informe. Cabe señalar que, la información enviada se reportó de acuerdo con el formato
+establecido por la SMA, el cual incluye los códigos de invalidación establecidos en la R.E. N°1.449 de
+la SMA.
+
+Los datos evaluados de MP10, MP2,5, SO2 y Pb, corresponden a las mediciones realizadas en las
+estaciones declaradas con representatividad poblacional para material particulado, indicadas a
+continuación en el punto 5.1 de este documento.
+
+5.1. Estaciones declaradas como EMRP-MP10, EMRP-MP2,5 y SO2
+
+En la Tabla 2 se describen las estaciones de la Red de Calama, y sus respectivas resoluciones que las
+califican como estación de monitoreo con representatividad poblacional (EMRP) para material
+particulado MP10, MP2,5 y SO2.
+
+             Tabla 2 Estaciones declaradas como EMRP-MP10, EMRP-MP2,5 y SO2
+
+Estación de  EMRP                                   Resolución que otorga EMRP para MP2,5
+Monitoreo
+
+Hospital El Cobre MP10                R.E. N° 969 del 8 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                                                                                                                                               8
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+  Estación de   EMRP                          Resolución que otorga EMRP para MP2,5
+   Monitoreo
+                MP2,5  R.E. N° 968 del 8 de agosto de 2018, de la Superintendencia del Medio Ambiente
+      CPVK
+CD 23 de Marzo  SO2    R.E. N° 1477 del 3 de abril de 2002, de la Secretaría Regional Ministerial de Salud de Antofagasta
+
+     Centro     MP10   R.E. N° 915 del 1 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                MP2,5  R.E. N° 914 del 1 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                MP10   R.E. N° 930 del 3 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                MP2,5  R.E. N° 928 del 3 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                MP10   R.E. N° 929 del 3 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+                MP2,5  R.E. N° 931 del 3 de agosto de 2018, de la Superintendencia del Medio Ambiente
+
+Por su parte, en la Tabla 3 se describe la ubicación de las estaciones de la Red de Calama, cuya
+representación gráfica se ilustra en la Figura 1.
+
+                       Tabla 3 Ubicación de las estaciones de la Red de Calama
+
+                Estación de Monitoreo         Coordenadas UTM (m)
+                                                  Datum WGS84,
+                                                     Huso 19 S*
+
+                Hospital El Cobre             509.239 E                              7.516.917 N
+
+                Colegio Pedro Vergara Keller  506.893 E                              7.518.227 N
+
+                Club Deportivo 23 de Marzo    506.399 E                              7.516.241 N
+
+                Centro                        507.389 E                              7.516.053 N
+*Referencia de las resoluciones EMRP.
+
+                                                                                                                                               9
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                                                   Figura 1 Ubicación de estaciones de calidad del aire de la Red de Calama
+
+               5.2. Descripción de instrumentos de medición Red de Calama
+
+                 De acuerdo con los antecedentes entregados por el titular de la Red de Calama para los años 2022,
+                 2023 y 2024, los instrumentos de medición utilizados para el monitoreo de MP10, MP2,5 y SO2 en
+                 las estaciones evaluadas, cumplen con el requisito de emplear equipos con aprobación USEPA,
+                 establecido en la norma primaria. A continuación, en la Tabla 4 se describen los instrumentos y
+                 métodos de medición de MP10, MP2,5 y SO2, utilizados en las estaciones de calidad del aire
+                 analizadas, durante el año 2024.
+
+                                                                                                                                              10
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                       Tabla 4 Listado de estaciones, instrumento y método de medición
+
+Estación de     Parámetro     Método de Medición                                  Marca/Modelo                  Método de
+Monitoreo                                                                                                      Referencia o
+                                                                                                             Equivalente EPA
+  Hospital El   MP10          Método Gravimétrico de Muestreador de Alto          Graseby Andersen /
+     Cobre      MP2,5                               Volumen                            GMW 1200              RFPS-1287-063
+                                                                                                             EQPM-0202-142
+Colegio Pedro    SO2          Método Gravimétrico de Muestreador de Bajo              BGI / PQ200            EQSA-0486-060
+Vergara Keller  MP10                                Volumen                                                  RFPS-1287-063
+                MP2,5                                                                                        RFPS-0498-116
+Club Deportivo  MP10          Fluorescencia ultravioleta                          Thermo / 43i               RFPS-1287-063
+ 23 de Marzo    MP2,5                                                                                        RFPS-0498-116
+                MP10          Método Gravimétrico de Muestreador de Alto          Thermo Scientific / HIVOL  RFPS-1287-063
+     Centro     MP2,5                               Volumen                                GUY15H1           RFPS-0498-116
+
+                              Método Gravimétrico de Muestreador de Bajo                  BGI / PQ200
+                                                    Volumen
+                                                                                  Thermo Scientific / HIVOL
+                              Método Gravimétrico de Muestreador de Alto                   GUY15H1
+                                                    Volumen
+                                                                                          BGI / PQ200
+                              Método Gravimétrico de Muestreador de Bajo
+                                                    Volumen                       Thermo Scientific / HIVOL
+                                                                                           GUY15H1
+                              Método Gravimétrico de Muestreador de Alto
+                                                    Volumen                              BGI / PQ 200
+
+                              Método Gravimétrico de Muestreador de Bajo
+                                                    Volumen
+
+5.3. Auditoría de datos
+
+Los datos de MP10, MP2,5, SO2 y Pb para los años 2022, 2023 y 2024, validados previamente por el
+titular, fueron sometidos a una revisión usando como criterio lo establecido en la norma primaria
+de ambos contaminantes. Además, se evaluó el comportamiento de los datos para el periodo en
+estudio, a través de gráficas de series de tiempo para cada una de las estaciones.
+
+La auditoría de los datos consideró una revisión de los códigos de invalidación de datos reportados
+para el contaminante MP10, MP2,5, SO2 y Pb, de las estaciones correspondientes a: Hospital El
+Cobre, CPVK, CD 23 de Marzo y Centro. Para el caso de los datos diarios de MP10 y MP2,5, medidos
+con equipos de tipo discreto, se evalúo el número de días sin datos o datos inválidos. Para la
+validación de las concentraciones de Plomo se utilizó el criterio establecido en la norma, que
+considera contar con al menos un 70% de las mediciones programadas en filtros de MP10 para el
+mes. De este análisis se presentó el siguiente porcentaje de datos inválidos (ver Tabla 5).
+
+Tabla 5 Porcentaje de datos inválidos diarios por contaminante, para el periodo de 2022 al 2024
+
+                                                       2022                       2023                       2024
+
+            Estación          Contaminante  % Diario   % Horario          % Diario   % Horario        % Diario   % Horario
+       Hospital El Cobre
+Colegio Pedro Vergara Keller       MP10         1      No aplica              2      No aplica            5      No aplica
+                                  MP2,5         2      No aplica              1      No aplica            3      No aplica
+                                            No aplica                     No aplica                   No aplica
+                                    SO2         20        0.,9                2          0,8              6          1,8
+                                   MP10                No aplica                     No aplica                   No aplica
+
+                                                                                                                       11
+
+                                            Superintendencia del Medio Ambiente
+                Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                        DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                                                    2022                 2023                 2024
+
+            Estación        Contaminante  % Diario  % Horario  % Diario  % Horario  % Diario  % Horario
+Club Deportivo 23 de Marzo
+                                MP2,5        11     No aplica      6     No aplica      2     No aplica
+             Centro              MP10        19     No aplica      2     No aplica      5     No aplica
+                                MP2,5         1     No aplica      2     No aplica      4     No aplica
+                                 MP10         2     No aplica      1     No aplica      5     No aplica
+                                MP2,5         0     No aplica      1     No aplica      2     No aplica
+
+En relación con el alto porcentaje de datos inválidos para MP10 en las estaciones CPVK y CD 23 de
+Marzo, el titular responsable de las estaciones, mediante la carta GS-DN N°2491, del 20 de julio de
+2022, indico que los meses de mayo y junio se invalidaron los datos debido a las bajas
+concentraciones observadas, las cuales no tienen relación con las concentraciones históricas de las
+estaciones CPVK y CD 23 de marzo. Con respecto al contaminante MP2,5 (discreto) presento un alto
+porcentaje de datos inválidos en la estación CPVK para el mes de mayo del año 2022, esto de
+acuerdo con lo informado por el titular, a través de la carta GS-DN N°2082, del 15 de junio de 2022,
+el cual indica que el muestreador partisol (Modelo 2025i-D/serie 202DI2_01101209) instalado en la
+estación CPVK presentó problemas de funcionamiento y debió ser reemplazado por dos
+muestreadores correspondiente a: un muestreador para MP10; marca TISCH, modelo TE-Wilbur y
+número de serie 517; y un muestreador para MP2,5, marca TISCH, modelo TE-Wilbur y número de
+serie 520. En la estación que mide SO2 continuo, la invalidación de datos horarios se debió a falla de
+energía, falla de equipo, mantenciones en terreno y valor fuera de rango.
+
+Mediante el análisis estadístico se determinó la cantidad de datos disponible para el cálculo de los
+promedios diarios respecto de los contaminantes. La construcción de los promedios diarios (24
+horas) se realizó en base a la disponibilidad de datos horarios por día, considerando como mínimo
+el 75% de datos efectivamente medidos de acuerdo con lo descrito en la R.E. N°1.449 de la SMA.
+Para los datos obtenidos de equipos gravimétricos se consideró la cantidad de horas de
+funcionamiento del equipo de MP2,5 y del equipo de alto volumen, MP10, con un mínimo de 18
+horas continuas de medición. Para los datos obtenidos de instrumentos de medición de SO2
+continuo se consideró la cantidad de horas de funcionamiento del instrumento, con un mínimo de
+18 horas continuas de medición.
+
+En las tablas siguientes, se resumen los días y porcentaje de datos válidos por año de cada estación
+para los contaminantes MP10, MP2,5 y SO2. Se puede observar un porcentaje de datos válidos
+superior al 75% para los contaminantes de MP10, MP2,5 y SO2, en las estaciones de la Red en análisis
+para los años 2022, 2023 y 2024.
+
+                     1 Y 2 Ver expediente DFZ-2023-188-II-NC
+
+                                                                                                                                              12
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+El resumen de datos disponibles permite concluir que se dispone de la información suficiente para
+realizar un análisis estadístico, aplicando los criterios especificados en la norma primaria de calidad
+del aire.
+
+Tabla 6 Estación Hospital El Cobre, porcentaje de datos válidos por contaminantes y por años (2022, 2023 y 2024)
+
+Estación Año          N° de Datos  Porcentaje  N° de Datos    Porcentaje     N° de     Porcentaje
+                      Disponibles   de datos   Disponibles     de datos      Datos      de datos
+Hospital El     2022                                                      Disponibles
+  Cobre         2023     (Días)        (%)        (Días)          (%)        (Días)        (%)
+                2024     MP10                     MP2,5                        SO2
+                                        99                         98         365          100
+                           121          98          120            99         365          100
+                           121          95          122            97         362           99
+                           116                      121
+
+Tabla 7. Estación Colegio Pedro Vergara Keller, porcentaje de datos válidos por contaminantes y por años (2022, 2023
+                                                                     y 2024)
+
+   Estación     Año      N° de Datos           Porcentaje de     N° de Datos      Porcentaje de
+                      Disponibles (Días)            datos     Disponibles (Días)       datos
+Colegio Pedro   2022                                 (%)                                (%)
+Vergara Keller  2023         MP2,5                    89             MP10                80
+                2024          110                     94               99                98
+                              116                     94              120              98,4
+                              116                                     121
+
+Tabla 8. Estación Club Deportivo 23 de Marzo, porcentaje de datos válidos por contaminantes y por años (2022, 2023
+                                                                    y 2024)
+
+  Estación      Año      N° de Datos           Porcentaje de     N° de Datos      Porcentaje de
+                      Disponibles (Días)        datos MP10    Disponibles (Días)   datos MP10
+     Club       2022
+Deportivo 23    2023         MP2,5                   (%)             MP10               (%)
+                2024          123                     99              100                81
+  de Marzo                    121                     98              121                98
+                              117                     96              116                95
+
+Tabla 9. Estación Centro, porcentaje de datos válidos por contaminantes y por años (2022, 2023 y 2024)
+
+Estación        Año      N° de Datos           Porcentaje de     N° de Datos      Porcentaje de
+ Centro               Disponibles (Días)        datos MP10    Disponibles (Días)   datos MP10
+                2022
+                2023         MP2,5                   (%)             MP10               (%)
+                2024          122                    100              120                98
+                              121                     99              121                99
+                              121                    98,4             117                95
+
+                 Para efectos de la evaluación anual de las normas respectivas, a continuación, en la Tabla 10 se
+                 resume el porcentaje de datos disponibles a nivel mensual de MP10, de las estaciones de la red de
+                 Calama, observándose una disponibilidad superior al 75% en los datos mensuales el año 2024 y
+                 2023, para MP10. Respecto al año 2022 se observa una disponibilidad superior al 75% en la mayoría
+                 de los datos mensuales, exceptuándose la estación CPVK y la estación CD 23 de Marzo en los meses
+
+                                                                                                                                              13
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+de mayo y junio de 2022, donde presentaron un 0% de datos en ambos meses. Además, se incluye
+el porcentaje de filtros de MP10 analizados para el contaminante plomo (Pb), cumpliendo con el
+número de concentraciones válidas para plomo en filtros, para el año 2023 y 2024, con porcentajes
+superiores o igual al 70% mensual que exige la norma.
+
+Tabla 10 Porcentaje de datos válidos de MP10 y Pb mensuales por estación para los años 2022, 2023 y 2024
+
+                                                MESES (%)
+                             MP10 - Red Calama
+
+Estación Año ENE FEB MAR ABR MAY JUN JUL AGO SEP OCT                     NOV DIC
+                                                                         100 100
+             2022 100 100 100 100 100 90 100 100 100 100                 100 100
+                                                                         100 82
+Hospital El  2023  100  100  100 100  90  100 100          91  100  100  100 100
+  Cobre                                                                  100 82
+             2024 100 100 90 100 90 100 100 100 90 90                     91 100
+                                                                         100 100
+             2022 100 100 80 100 0        0 100 100 100 100              100 83
+                                                                         100 100
+CPVK 2023 100 100 100 100 100 100 100 100 100 100                        100 100
+                                                                         100 100
+             2024 100 100 90 90 100 100 82 100 100 80                    100 100
+
+             2022 100 89 100 100 0        0 100 100 100 100              NOV DIC
+                                                                         100 100
+CD 23 de     2023 100   100  100 100 100 100 100           91  100  100  100 82
+ Marzo                                                                   100 82
+             2024 80 100 100 100 100 90 100 90 90 90                      91 100
+                                                                         100 83
+             2022 91 100 100 100 100 100 90 100 100 100                  100 100
+                                                                         100 100
+Centro 2023 100 100 100 100 100 100 100 100 100 90                       100 100
+
+             2024 100 100 100 100 90 91 91 100 90 80
+
+                             Pb - Red Calama
+
+Estación Año ENE FEB MAR ABR MAY JUN JUL AGO SEP OCT
+
+Hospital El 2023 100 100 100 100 90 100 100 91 100 100
+  Cobre 2024 100 100 90 100 90 100 100 100 90 90
+
+CPVK         2023 100 100 100 100 100 100 100 100 100 100
+             2024 100 100 90 90 100 100 82 100 100 80
+
+CD 23 de 2023 100 100 100 100 100 100 100 91 100 100
+ Marzo 2024 80 100 100 100 100 90 100 90 90 90
+
+               2023 100 100 100 100 100 100 100 100 100 90
+Centro
+
+               2024 100 100 100 100 90 91 91 100 90 80
+
+Para efectos de la evaluación anual de las normas respectivas, a continuación, en la Tabla 11 se
+resume el porcentaje de datos disponibles a nivel mensual, de las estaciones de la red de Calama,
+observándose una disponibilidad superior al 75% en la mayoría de los datos mensuales para el
+contaminante MP2,5, exceptuándose la estación CPVK en mayo de 2022, donde presentó un 0% por
+lo que este dato no fue considerado para el cálculo de la concentración anual. Respecto al año 2023
+y 2024 se observa una disponibilidad superior al 75% en los datos mensuales para el contaminante
+MP2,5.
+
+                                                                                                                                              14
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+Tabla 11 Porcentaje de datos válidos de MP2,5 mensuales por estación para los años 2022, 2023 y 2024
+
+                                            MESES (%)
+
+                                       Red Calama
+
+Estación Año ENE FEB MAR ABR MAY JUN JUL AGO SEP OCT                         NOV DIC
+                                                                             100 100
+Hospital El  2022 100 89 90 100 100 100 100 100 100 100                      100 100
+  Cobre                                                                      100 100
+             2023  100  100  100  100  100  100    100  91  100        100   100 100
+                                                                              90 82
+             2024 100 100 100 100 100 82 100 100 100 100                      91 100
+                                                                             100 100
+             2022 100 100 80 100 0 100 100 100 100 100                       100 91
+                                                                             100 82
+CPVK 2023 100 100 100 100 100 90 100 82 90 100                               100 100
+                                                                             100 91
+             2024 100 100 100 100 100 100 100 100 91                   90    100 100
+
+CD 23 de     2022 100 100 100 100 100 100 100 90 100 100
+ Marzo
+             2023 100   100  100  100  100  100    100  91  100        100
+
+             2024 100 100 100 100 100 100 100 80 100 90
+
+             2022 100 100 100 100 100 100 100 100 100 100
+
+Centro 2023 100 100 100 100 100 100 100 91 100 90
+
+             2024 100 100 100 100 100 100 92 90 100 100
+
+En relación con el parámetro SO2 se observa en la Tabla 12, que el porcentaje de datos es superior
+al 75% en todos los meses del periodo de evaluación.
+
+Tabla 12 Porcentaje de datos válidos de SO2 mensuales por estación para los años 2022, 2023 y 2024
+
+Estación     Año ENE FEB                                    MESES (%)  OCT   NOV DIC
+Hospital     2022 100 100    MAR ABR MAY JUN JUL AGO SEP                100  100 100
+             2023 100 100    100 100 100 100 100 100 100                100  100 100
+             2024 100 100    100 100 100 100 100 100 100                100  100 100
+                             100 100 100 100 100 87 100
+
+                                                                                                                                              15
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+6. RESULTADOS DEL ANÁLISIS DE LA NORMA
+
+6.1. Evaluación de la norma para MP10
+
+6.1.1. Evaluación de la norma 24 horas para MP10
+
+El periodo de evaluación de la norma para MP10, corresponde al comprendido entre el día 1° de
+enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 13, se presenta un resumen de los
+valores calculados del percentil 98 de la concentración 24 horas de la norma de MP10, para los años
+2022, 2023 y 2024, de las estaciones de monitoreo de la Red.
+
+Cabe señalar que, de acuerdo con los límites establecido en el D.S. N° 12/2022, del Ministerio del
+Medio Ambiente, la norma de calidad del aire para material particulado respirable (MP10), se
+considerará sobrepasada en las siguientes condiciones:
+
+a) Cuando el percentil 98 de las concentraciones de 24 horas registradas durante un período anual
+en cualquier estación monitora clasificada como EMRPMP10, sea mayor o igual a 130 μg/m3N.
+
+b) Asimismo, se considerará superada la norma, si antes que concluya un año calendario, el número
+de días con mediciones sobre el valor de 130 µg/m3N, sea mayor que siete.
+
+Cabe resaltar que el nuevo límite establecido en la norma es aplicable a partir del año 2022, y para
+el periodo anterior se encontraba vigente la norma de MP10, D.S. 59/1998, del MINSEGPRES.
+
+Tabla 13 Percentil 98 de las concentraciones de 24 horas de MP10, para los años 2022, 2023 y 2024
+
+Estación           Percentil 98      % de la   Percentil 98      % de la   Percentil 98      % de la
+                    Año 2022         Norma      Año 2023         Norma      Año 2024         Norma
+                    (μg/m3N)        24 horas    (μg/m3N)        24 horas    (μg/m3N)        24 horas
+                                      2022                        2023                        2024
+                                 130 (μg/m3N)                130 (μg/m3N)                130 (μg/m3N)
+
+Hospital El Cobre  55            42            50            38            47            36
+
+Colegio Pedro      81            62            94            72            78            60
+Vergara Keller
+
+Club Deportivo     78            60            77            59            68            52
+ 23 de Marzo
+
+Centro             59            45            60            46            54            42
+
+                 De acuerdo con el análisis efectuado y la determinación del percentil 98, se determinó que el valor
+                 de la norma diaria de MP10 al compararlo con el límite de 130 µg/m3N no fue superada en ninguna
+                 de las estaciones de la Red de Calama para los años 2022, 2023 y 2024, y las concentraciones
+                 obtenidas estuvieron muy por debajo del 80% del límite de la norma de 24 horas. Cabe señalar que,
+                 las concentraciones obtenidas mediante el percentil 98 en el año 2022, correspondieron a:
+
+                                                                                                                                              16
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+81 µg/m3N en la estación CPVK, 78 µg/m3N en la estación CD 23 de Marzo, 59 µg/m3N en la estación
+Centro y 55 µg/m3N en la estación Hospital El Cobre, correspondientes en porcentaje y respecto del
+límite de la norma de 24 horas a: 62%, 60%, 45% y 42%, respectivamente. Respecto a las
+concentraciones obtenidas mediante el percentil 98 en el año 2023, correspondieron a: 94 µg/m3N
+en la estación CPVK, 77 µg/m3N en la estación CD 23 de Marzo, 60 µg/m3N en la estación Centro y
+50 µg/m3N en la estación Hospital El Cobre, correspondientes en porcentaje y respecto del límite de
+la norma de 24 horas a: 72%, 59%, 46% y 38%, respectivamente. Finalmente, las concentraciones
+obtenidas mediante el percentil 98 en el año 2024, correspondieron a: 78 µg/m3N en la estación
+CPVK, 68 µg/m3N en la estación CD 23 de Marzo, 54 µg/m3N en la estación Centro y 47 µg/m3N en
+la estación Hospital El Cobre, correspondientes en porcentaje y respecto del límite de la norma de
+24 horas a: 60%, 52%, 42% y 36%, respectivamente.
+
+El Gráfico 1 muestra los valores obtenidos del cálculo del percentil 98 de las concentraciones diarias
+para el contaminante MP10, por estación para los años 2022, 2023 y 2024.
+
+                                                            Norma 24 horas de MP10
+
+               156
+
+               130                                                                              Nivel de Saturación
+                                                                                                Nivel de Latencia
+MP10 (µg/m3N)  104
+                                                                                                 Centro
+               78
+
+               52
+
+               26
+
+               0
+
+                    Hospital El Cobre  Colegio Pedro Vergara Keller Club Deportivo 23 de Marzo
+
+                                       2022 2023 2024
+
+                                                      Gráfico 1 Norma 24 horas para MP10, para años 2022, 2023 y 2024
+
+                 6.1.2. Evaluación de la norma anual para MP10
+
+                 El periodo de evaluación de la norma para MP10, corresponde al comprendido entre el día 1° de
+                 enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 14, se presenta un resumen de los
+                 valores obtenidos, a través del cálculo del promedio aritmético de las concentraciones de los años
+                 2022, 2023 y 2024, para las estaciones de monitoreo de la Red.
+
+                 De acuerdo con los límites establecido en el D.S. N° 12/2022, del Ministerio del Medio Ambiente, la
+                 norma primaria anual de calidad del aire para material particulado respirable MP10, se considerará
+                 sobrepasada, cuando el promedio aritmético de tres años calendarios consecutivos, en cualquier
+                 estación monitora calificada como EMRP, sea mayor o igual que 50 µg/m3N.
+
+                                                                                                                                              17
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+               Tabla 14 Concentración promedio anual, promedio tres años y porcentaje de la norma anual MP10
+
+                    Estación          Promedio  Promedio  Promedio               Promedio 3 años      % de la
+               Hospital El Cobre        Anual     Anual     Anual                (2022-2023-2024)  Norma Anual
+                                         2022      2023      2024                                  50 (μg/m3N)
+                                                                                      (μg/m3N)
+                                      (μg/m3N)  (μg/m3N)  (μg/m3N)                                       62
+                                                                                          31
+                                          30        33        30
+
+Colegio Pedro Vergara Keller          49        55        50                                   51     102
+
+Club Deportivo 23 de Marzo            56        55        48                                   53     106
+
+                   Centro             37        41        37                                   38     76
+
+El promedio tres años (2022, 2023 y 2024), expresado en porcentaje muestra que la estación Club
+Deportivo 23 de Marzo supera la norma de MP10 con un porcentaje de 106%, correspondiente a
+una concentración de 53 µg/m3N, además se observa un porcentaje superior al 100% del límite de
+la norma anual en la estación CPVK, con una concentración como promedio tres años de 51 µg/m3N,
+correspondiente a un 102%, del límite de la norma anual. En el resto de las estaciones las
+concentraciones obtenidas se encontraron por debajo del 80% del límite de la norma anual.
+
+Complementariamente, en el Gráfico 2, se pueden observar las concentraciones correspondientes
+al promedio aritmético de tres años calendario consecutivo, para el período comprendido entre el
+día 1° de enero de 2022 y el día 31 de diciembre de 2024.
+
+                                                            Norma Anual de MP10
+
+               60
+
+               50                                                                                  Nivel de Saturación
+                                                                                                   Nivel de Latencia
+MP10 (µg/m3N)  40
+                                                                                                   Centro
+               30
+
+               20
+
+               10
+
+               0
+
+                   Hospital El Cobre  Colegio Pedro Vergara Keller Club Deportivo 23 de Marzo
+
+                                          Promedio Trianual (2022-2023-2024)
+
+                   Gráfico 2 Norma Anual para MP10, Promedio tres años, para el periodo 2022 al 2024
+
+                                                                                                                                              18
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+6.2. Evaluación de la norma para MP2,5
+
+6.2.1. Evaluación de la norma 24 horas para MP2,5
+
+El periodo de evaluación la norma para MP2,5, corresponde al comprendido entre el día 1° de enero
+de 2022 y el día 31 de diciembre de 2024. En la Tabla 15, se presenta un resumen de los valores
+calculados del percentil 98 de la concentración 24 horas de la norma de MP2,5, para los años 2022,
+2023 y 2024, de las estaciones de monitoreo de la Red.
+
+De acuerdo con el límite establecido en el D.S. N° 12/2011 del MMA, se considerará sobrepasada la
+norma para MP2,5 cuando el percentil 98 de los promedios diarios registrados durante un año, sea
+mayor a 50 µg/m3, en cualquier estación monitora calificada como EMRPMP2,5.
+
+Tabla 15 Percentil 98 de las concentraciones de 24 horas de MP2,5 para los años 2022, 2023 y 2024
+
+Estación           Percentil  % de la Norma  Percentil  % de la Norma  Percentil  % de la Norma
+                    98 Año       24 horas     98 Año       24 horas     98 Año       24 horas
+                     2022           2022       2023           2023       2024           2024
+                   (μg/m3)      50 (μg/m3)   (μg/m3)      50 (μg/m3)   (μg/m3)      50 (μg/m3)
+
+Hospital El Cobre  22         44             14         28             13         26
+
+Colegio Pedro      20         40             16         32             18         36
+Vergara Keller
+
+Club Deportivo     19         38             14         28             14         28
+ 23 de Marzo
+
+Centro             15         30             15         30             16         32
+
+De acuerdo con el análisis efectuado y la determinación del percentil 98 de las concentraciones de
+24 horas para los años 2022, 2023 y 2024, se determinó que el valor de la norma de 24 horas para
+MP2,5 correspondiente a 50 µg/m3, no fue superada en ninguna de las estaciones de la Red de
+Calama para el periodo en estudio y las concentraciones obtenidas estuvieron muy por debajo del
+80% del límite de la norma de 24 horas. Cabe señalar que, para el año 2024 las concentraciones
+obtenidas, mediante el cálculo del percentil 98, fueron las siguientes: 13 µg/m3 en la estación
+Hospital El Cobre, 18 µg/m3 en la estación CPVK, 14 µg/m3 en estación CD 23 de Marzo y 16 µg/m3
+en estación Centro; por lo tanto, las concentraciones obtenidas en todas las estaciones se
+encontraron por debajo del 36% del límite de la norma de 24 horas.
+
+El Gráfico 3 muestra los valores obtenidos del cálculo del percentil 98 de las concentraciones diarias
+para el contaminante MP2,5, por estación, para los años 2022, 2023 y 2024.
+
+                                                                                                                                              19
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                                                            Norma 24 horas de MP2,5
+
+               60
+
+               50                                                                                      Nivel de Saturación
+                                                                                                       Nivel de Latencia
+MP2,5 (µg/m3)  40
+                                                                                                        Centro
+               30
+
+               20
+
+               10
+
+               0
+
+                       Hospital el Cobre  Colegio Pedro Vergara Keller Club Deportivo 23 de Marzo
+
+                                                    2022 2023 2024
+
+                       Gráfico 3 Norma 24 horas para MP2.5 para años 2022, 2023 y 2024
+
+6.2.2. Evaluación de la norma anual para MP2,5
+
+El periodo de evaluación de la norma para MP2,5, corresponde al comprendido entre el día 1° de
+enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 16, se presenta un resumen de los
+valores obtenidos, a través del cálculo del promedio aritmético de las concentraciones de los años
+2022, 2023 y 2024, para las estaciones de monitoreo de la Red.
+
+De acuerdo con los límites establecidos en el D.S. N°12/2011 del MMA, la norma para MP2,5 se
+considerará sobrepasada cuando el promedio tres años de las concentraciones anuales sea mayor a
+20 μg/m3, en cualquier estación monitora calificada como EMRPMP2,5. Cabe señalar que la norma
+anual para MP2,5 requiere determinar el promedio aritmético de 3 años calendario consecutivos de
+las concentraciones anuales.
+
+                   Tabla 16 Concentración promedio anual, promedio tres años y porcentaje de la norma anual MP2,5
+
+     Estación          Promedio           Promedio  Promedio                         Promedio 3 años      % de la
+                         Anual              Anual     Anual                          (2022-2023-2024)  Norma Anual
+Hospital El Cobre         2022               2023      2024
+  Colegio Pedro         (μg/m3)            (μg/m3)   (μg/m3)                               (μg/m3)      20 (μg/m3)
+  Vergara Keller            9                  9         9
+                                                                                               9             45
+Club Deportivo 23          12                 12        11
+     de Marzo                                                                                 12             60
+                           11                 11        11
+                                                                                              11             55
+
+               Centro  9                  10        11                                             10  50
+
+                 El promedio tres años (2022, 2023 y 2024), expresado en porcentaje muestra que en las estaciones
+                 de la Red de Calama no superan el límite de la norma anual de MP2,5 establecido en 20 µg/m3,
+
+                                                                                                                                              20
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+encontrándose por debajo del 80% del límite de la norma anual. Las concentraciones obtenidas
+como promedio tres años fueron de:12 µg/m3 para la estación de CPVK, 11 µg/m3 para la estación
+CD 23 de Marzo, 10 µg/m3 para la estación Centro y 9 µg/m3 en estación Hospital El Cobre.
+
+Complementariamente, en el Gráfico 4, se pueden observar las concentraciones correspondientes
+al promedio aritmético de tres años calendario consecutivo, para el período comprendido entre el
+día 1° de enero de 2022 y el día 31 de diciembre de 2024.
+
+                                                            Norma Anual de MP2,5
+
+               30
+
+               25
+
+MP2,5 (µg/m3)  20                                                                              Nivel de Saturación
+                                                                                               Nivel de Latencia
+               15
+                                                                                               Centro
+               10
+
+               5
+
+               0
+
+                   Hospital el Cobre  Colegio Pedro Vergara Keller Club Deportivo 23 de Marzo
+
+                                      Promedio Trianual (2022-2023-2024)
+
+                                          Gráfico 4 Norma Anual para MP2,5, Promedio tres años, para el periodo 2022 al 2024
+
+               6.3. Evaluación de la norma primaria SO2
+
+                 6.3.1. Evaluación de la norma primaria de 1 hora SO2
+
+                 El periodo de evaluación de la norma primaria de 1 hora para SO2, corresponde al comprendido
+                 entre el día 1° de enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 17, se presenta un
+                 resumen con los valores del percentil 99 de la norma de 1 hora para SO2, en todas las estaciones de
+                 la Red.
+
+                 Se debe señalar que los límites establecidos en el D.S. N° 104/2018 del Ministerio del Medio
+                 Ambiente, deben cumplir con las siguientes condiciones:
+
+                      a. Se considerará sobrepasada la norma primaria de calidad de aire para SO2 como
+                           concentración de 1 hora, cuando el promedio aritmético de tres años calendario sucesivos
+                           de los valores del percentil 98,5 de las concentraciones de 1 hora registradas cada año, fuere
+                           mayor o igual a 134 ppbv (350 µg/m3N). A partir del cuarto año calendario de publicada la
+                           norma en el diario oficial, se considerará un percentil 99 para evaluar esta condición.
+
+                                                                                                                                              21
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+    b. Se considerará superada la norma de 1 hora, si en un año calendario, el valor
+         correspondiente al percentil 98,5 de las concentraciones de 1 hora registradas, fuere mayor
+         o igual al doble del valor de la norma que se establece. A partir del cuarto año calendario
+         año de publicada la norma en el Diario Oficial, se considera un percentil 99 para evaluar esta
+         condición.
+
+Cabe destacar que el Artículo 5° de la norma establece que a partir del cuarto año calendario de
+publicada la norma en el Diario Oficial (16 de mayo de 2019), se considera el percentil 99 para
+evaluar la condición a. y condición b. de la norma primaria horaria, por lo tanto, se debió calcular el
+percentil 99 para los años 2022 y 2023, y de esta manera determinar el promedio tres años con el
+mismo criterio y percentil.
+
+Tabla 17 Evaluación de la norma primaria de 1 hora de SO2 para el período 2022 al 2024
+
+Estación           Percentil 99  Percentil 99  Percentil 99     Percentil 99             % de la
+                       2022          2023          2024      Promedio 3 años             Norma
+                      (ppbv)        (ppbv)        (ppbv)     (2022-2023-2024)            Horaria
+                                                                                        134 ppbv
+                                                                    (ppbv)
+
+Hospital El Cobre  7,30          8,95          13,16         9,80                       7
+
+Respecto a la condición (a) se observó, en las estaciones para el período en estudio, que la norma
+horaria que establece como límite 134 ppbv no fue superada en la estación Hospital El Cobre
+evaluada para el periodo 2022 a 2024. En relación con la evaluación de acuerdo con la condición (a),
+se determinó que la norma de 1 hora no fue superada para el período en estudio y la concentración
+que registró la estación Hospital El Cobre fue de 9,80 ppbv, correspondiente al 4% del valor límite
+de la norma horaria.
+
+El Gráfico 5 muestra los valores obtenidos del análisis del percentil 99 del periodo como promedio
+tres años (condición a).
+
+                                                                                                                                              22
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 Norma Primaria de 1 Hora para SO2
+
+            140                                                                                        Nivel de Saturación
+
+            130
+
+            120
+
+            110                                                                                        Nivel de Latencia
+
+            100
+
+            90
+
+SO2 (ppbv)  80
+
+            70
+
+            60
+
+            50
+
+            40
+
+            30
+
+            20
+
+            10
+
+            0
+                                                                                             Hospital
+
+                 Promedio trianual (2022-2023-2024)
+
+     Gráfico 5 Norma primaria de 1 hora para SO2, promedio tres años, para el t periodo 2022 al 2024 (condición a)
+
+Complementariamente el Gráfico 6 presenta los valores obtenidos del cálculo del percentil 99 de
+las concentraciones de 1 hora para cada uno de los años del periodo analizado (condición b).
+
+                 Norma Primaria de 1 Hora para SO2
+
+            270                                                                                        Nivel de Saturación
+
+            260
+            250
+            240
+            230
+            220                                                                                        Nivel de Latencia
+
+            210
+            200
+            190
+            180
+            170
+SO2 (ppbv)  160
+            150
+            140
+            130
+            120
+            110
+            100
+            90
+            80
+            70
+            60
+            50
+            40
+            30
+            20
+            10
+            0
+
+                 Hospital
+
+                 2022 2023 2024
+
+                 Gráfico 6 Norma primaria de 1 hora para SO2, por año para el periodo 2022 al 2024 (condición b)
+
+                                                                                                                                              23
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+En la Tabla 18, se resume el número de días de excedencias a la norma de 1 hora de SO2 para la
+estación, para los años 2022, 2023 y 2024, considerando el valor límite de 134 ppbv. Para todo el
+periodo evaluado, la estación Hospital El Cobre presenta un número de excedencias a la norma en
+el año 2024 de dos (2) excedencias a la norma de 1 hora en la estación.
+
+Tabla 18 N° de Excedencias a la norma de 1 Hora de SO2 por estación para los años 2022, 2023 y 2024
+
+Estación           N° de Excedencia Horarias  N° de Excedencia Horarias  N° de Excedencia Horarias
+                                2022                       2023                       2024
+
+Hospital El Cobre  0                          0                          2
+
+6.3.2. Evaluación de la norma primaria 24 horas SO2
+
+El periodo de evaluación de la norma primaria de 24 horas para SO2, corresponde al comprendido
+entre el día 1° de enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 19, se presenta un
+resumen con los valores del percentil 99 de la norma de 24 horas para SO2, en la estación de la Red.
+
+Se debe señalar que, de acuerdo con los límites establecidos en el D.S. N° 104/2018 del Ministerio
+del Medio Ambiente, deben cumplir con las siguientes condiciones:
+
+    a. Se considerará sobrepasada la norma primaria de calidad de aire para SO2 como
+         concentración de 24 horas, cuando el promedio aritmético de tres años calendarios
+         sucesivos, de los valores del percentil 99 de las concentraciones de 24 horas registradas,
+         fuere mayor o igual a 57 ppbv (150 µg/m3N).
+
+    b. Se considerará superada la norma 24 horas también, si en un año calendario, el valor
+         correspondiente al percentil 99 de las concentraciones de 24 horas registradas, fuere mayor
+         o igual al doble del valor de la norma que se establece.
+
+De acuerdo con lo calculado, ver Tabla 19, se determinó respecto a la condición (a) que la norma de
+24 horas no fue superada, y tampoco se superó el 80% del valor límite de la norma de 24 horas en
+la estación de la red. La concentración que se observa en la estación Hospital El Cobre corresponde
+a una concentración promedio tres años de 4,38 ppbv, equivalente al 8% del valor límite de la norma
+de 24 horas. Por otra parte, la evaluación de la norma 24 horas de acuerdo con la condición (b),
+determinó que la norma no fue superada en la estación Hospital El Cobre para el período en estudio.
+
+                                                                                                                                              24
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                Tabla 19 Evaluación de la norma primaria de 24 horas para SO2 durante el período 2022 al 2024
+
+                Estación  Percentil 99  Percentil 99  Percentil 99             Percentil 99   % de la
+                              2022          2023          2024              Promedio 3 años    Norma
+                             (ppbv)        (ppbv)        (ppbv)             (2022-2023-2024)  24 horas
+                                                                                              57 ppbv
+                                                                                   (ppbv)
+
+Hospital El Cobre         3,28          3,73          6,13                  4,38                               8
+
+El Gráfico 7 muestra los valores obtenidos del análisis del percentil 99 del periodo como promedio
+tres años (condición a).
+
+                                Norma Primaria 24 horas para SO2
+
+            60                                                                                Nivel de Saturación
+            58
+            56
+            54
+            52
+            50
+            48
+            46                                                                                Nivel de Latencia
+
+            44
+            42
+            40
+            38
+            36
+SO2 (ppbv)  34
+            32
+            30
+            28
+            26
+            24
+            22
+            20
+            18
+            16
+            14
+            12
+            10
+            8
+            6
+            4
+            2
+            0
+
+                                                      Hospital
+
+                                        Promedio trianual (2022-2023-2024)
+
+      Gráfico 7 Norma primaria 24 horas para SO2, promedio tres años, para el periodo 2022 al 2024 (condición a)
+
+El Gráfico 8 presenta los valores obtenidos del cálculo del percentil 99 de las concentraciones de 24
+horas para cada uno de los años del periodo analizado (condición b).
+
+                                                                                                                                              25
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 Norma Primaria 24 horas para SO2
+
+            120                                    Nivel de Saturación
+
+            114
+
+            108
+
+            102
+
+            96                                     Nivel de Latencia
+
+            90
+
+            84
+
+            78
+
+SO2 (ppbv)  72
+
+            66
+
+            60
+
+            54
+
+            48
+
+            42
+
+            36
+
+            30
+
+            24
+
+            18
+
+            12
+
+            6
+
+            0
+
+                 Hospital
+
+                 2022 2023 2024
+
+                 Gráfico 8 Norma primaria 24 horas para SO2, por año para el periodo 2022 al 2024 (condición b)
+
+                 6.3.3. Evaluación de la norma primaria anual SO2
+
+                 El periodo de evaluación de la norma primaria anual para SO2, corresponde al comprendido entre
+                 el día 1° de enero de 2022 y el día 31 de diciembre de 2024. En la Tabla 20, se presenta un resumen
+                 con los promedios anuales de SO2 en la estación de la Red.
+
+                 Se debe señalar que, de acuerdo con los límites establecidos en el D.S. N° 104/2018 del Ministerio
+                 del Medio Ambiente, deben cumplir con las siguientes condiciones:
+
+                      a. Se considerará sobrepasada la norma primaria de calidad de aire para SO2 como
+                           concentración anual, cuando el promedio aritmético de tres años calendarios sucesivos de
+                           los valores de concentración anual, fuere mayor o igual a 23 ppbv (60 µg/m3N).
+
+                      b. Si en un año calendario, el valor de la concentración anual, fuere mayor o igual al doble del
+                           valor de la norma que se establece.
+
+                 Los resultados de la evaluación de la norma anual, presentados en la Tabla 20, indican que de
+                 acuerdo con la condición (a), la norma anual no fue superada, la estación Hospital El Cobre
+                 presentando una concentración promedio tres años de 1,18 ppbv, equivalente al 5% del límite de la
+                 norma anual. Respecto de la evaluación de acuerdo con la condición (b) se determinó que la norma
+                 no fue superada.
+
+                                                                                                                                              26
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                Tabla 20 Evaluación de la norma primaria anual para SO2 durante el período 2022 al 2024
+
+            Estación  Concentración  Concentración  Concentración        Promedio 3 años                  % de la
+                        Anual 2022     Anual 2023     Anual 2024         (2022-2023-2024)                 Norma
+                           (ppbv)         (ppbv)         (ppbv)                                            Anual
+                                                                                (ppbv)                   23 (ppbv)
+
+Hospital El Cobre     1,22           1,09            1,24                1,18                            5
+
+El Gráfico 9 muestra el promedio tres años, para el periodo 2022 al 2024, para la estación Hospital
+El Cobre (condición a).
+
+                                     Norma Anual para SO2
+
+            24                                                                 Nivel de Saturación
+
+            23
+
+            22
+
+            21
+
+            20                                                                 Nivel de Latencia
+
+            19
+
+            18
+
+            17
+
+            16
+
+            15
+
+SO2 (ppbv)  14
+
+            13
+            12
+            11
+
+            10
+             9
+             8
+             7
+             6
+             5
+             4
+             3
+             2
+             1
+             0
+
+                                           Hospital
+
+                                     Promedio trianual (2022-2023-2024)
+
+        Gráfico 9 Norma primaria anual para SO2, promedio tres años, para el periodo 2022 al 2024 (condición a)
+
+El Gráfico 10 presenta las concentraciones como promedio anual para cada uno de los años de
+periodo analizado (condición b).
+
+                                                                                                                                              27
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                Norma Anual para SO2
+
+            60
+
+            55
+
+            50                                                                                            Nivel de Saturación
+
+            45
+
+            40                                                                                            Nivel de Latencia
+
+SO2 (ppbv)  35
+
+            30
+
+            25
+
+            20
+
+            15
+
+            10
+
+            5
+
+            0
+                                                                                                Hospital
+
+                2022 2023 2024
+
+                Gráfico 10 Norma primaria anual para SO2, promedio anual por año para periodo 2022 al 2024 (condición b)
+
+6.4. Evaluación de la norma primaria de plomo (Pb)
+
+6.4.1. Evaluación de la norma anual de plomo (Pb)
+
+La norma primaria de calidad del aire para el contaminante plomo, D.S. N° 136/2000 del Ministerio
+Secretaria General de la Presidencia de la República, establece que el límite para plomo será de 0,5
+microgramos por metro cúbico normal (μg/m3N) como concentración anual.
+
+Cabe señalar que se considerará sobrepasada la norma cuando el promedio aritmético de los valores
+de concentración anual de dos años sucesivos supera el nivel de la norma en cualquier estación con
+representatividad poblacional.
+
+Para la evaluación de la norma de plomo se utilizaron los resultados de los análisis químicos
+efectuados a los filtros de material particulado MP10. El periodo de evaluación de la norma anual
+de plomo (Pb), corresponde al comprendido entre el día 1° de enero de 2023 y el día 31 de diciembre
+de 2024. En la Tabla 21, se presenta un resumen con las concentraciones anuales para plomo, el
+promedio bianual expresado en porcentaje muestra que la norma anual de Plomo no fue superada
+en las estaciones de monitoreo de la Red en estudio, y los porcentajes obtenidos respecto de la
+norma anual se encontraron por debajo del 80% de la norma anual.
+
+                                                                                                                                              28
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                  Tabla 21 Evaluación de la norma primaria anual para Plomo durante el período 2023 al 2024
+
+                                           Concentración Concentración          Promedio             % de la
+                                                                                 bianual             Norma
+                       Estación            Anual 2023 Anual 2024               (2023-2024)            Anual
+                  Hospital El Cobre                                             (μg/m3N)
+                                           (μg/m3N)  (μg/m3N)                                           0,5
+                                                                                  0,0088            (μg/m3N)
+                                           0,0077    0,0099
+                                                                                                       1,8
+
+             Colegio Pedro Vergara Keller  0,0284    0,0288                    0,0286               6
+
+             Club Deportivo 23 de Marzo    0,0158    0,0240                    0,0199               4
+
+                  Centro                   0,0112    0,0121                    0,0117               2,3
+
+El Gráfico 11 presenta el promedio bianual de las concentraciones anuales de Plomo para el periodo
+comprendido entre el día 1°de enero de 2023 y el día 31 de diciembre de 2024.
+
+                                                         Norma Anual de Plomo
+
+             0,6
+
+             0,5                                                                                    Nivel de Saturación
+                                                                                                      Nivel de Latencia
+Pb (µg/m3N)  0,4
+                                                                                                     Centro
+             0,3
+
+             0,2
+
+             0,1
+
+             0,0
+
+                  Hospital El Cobre        Colegio Pedro Vergara Keller Club Deportivo 23 de Marzo
+
+                                           Promedio Bianual (2023-2024)
+
+                                           Gráfico 11 Norma anual para Plomo (Pb)
+
+                                                                                                                                              29
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+               7. CONCLUSIONES
+
+                 La revisión de la norma primaria de calidad del aire para el contaminante MP10, MP2,5 y SO2, se
+                 realizó en base al periodo comprendido entre el 1° de enero de 2022 y el 31 de diciembre de 2024,
+                 considerándose válida la información generada de las mediciones de MP10, MP2,5 y SO2, de las 4
+                 estaciones de la Red Calama: Hospital El Cobre, Colegio Pedro Vergara Keller, Club Deportivo 23 de
+                 Marzo y Centro. Para verificar el cumplimiento de las normas se tomó en cuenta la representatividad
+                 poblacional para material particulado (MP10 y MP2,5) y SO2, el empleo de instrumentos de
+                 medición de contaminantes atmosféricos con aprobación USEPA y la constatación por parte de la
+                 SMA de la correcta validación de los datos por parte del titular para los años 2022, 2023 y 2024.
+
+                 Norma de calidad del aire para MP10
+
+                 La evaluación de la norma de 24 horas de MP10, y que fija como límite un valor de 130 μg/m3N
+                 (dicho límite rige desde el año 2022), se determinó mediante el análisis y el cálculo del percentil 98,
+                 que la norma de 24 horas no fue superada y las concentraciones obtenidas estuvieron por debajo
+                 del 80% del límite de la norma de 24 horas para los años 2022, 2023 y 2024. Cabe señalar que, para
+                 el año 2022 las concentraciones obtenidas, mediante el cálculo del percentil 98, fueron las
+                 siguientes: 81 µg/m3N en la estación CPVK, 78 µg/m3N en la estación CD 23 de Marzo, 59 µg/m3N en
+                 la estación Centro y 55 µg/m3N en la estación Hospital El Cobre. Por otra parte, para en el año 2023
+                 las concentraciones obtenidas, mediante el cálculo del percentil 98, fueron las siguientes:
+                 94 µg/m3N en la estación CPVK, 77 µg/m3N en la estación CD 23 de Marzo, 60 µg/m3N en la estación
+                 Centro y 50 µg/m3N en la estación Hospital El Cobre. Finalmente, para el año 2024 las
+                 concentraciones obtenidas corresponden a: 78 µg/m3N en la estación CPVK, 68 µg/m3N en la
+                 estación CD 23 de Marzo, 54 µg/m3N en la estación Centro y 47 µg/m3N en la estación Hospital El
+                 Cobre.
+
+                 Respecto de la norma anual de MP10 que establece como límite una concentración de 50 μg/m3N,
+                 mediante el cálculo del promedio 3 años (2022, 2023 y 2024), se determinó que la norma anual fue
+                 superada en la estación Club Deportivo 23 de Marzo con una concentración de 53 µg/m3N,
+                 equivalente al 106% del límite de la norma anual y en la estación CPVK, con una concentración como
+                 promedio tres años de 51 µg/m3N, correspondiente a un 102%, del límite de la norma anual. En el
+                 resto de las estaciones las concentraciones obtenidas se encontraron por debajo del 80% del límite
+                 de la norma anual.
+
+                 Norma primaria de calidad del aire para MP2,5
+
+                 El análisis de la norma de MP2,5 de 24 horas, que establece como límite una concentración de
+                 50 μg/m3, concluyó que los valores correspondientes al percentil 98 de las concentraciones 24 horas
+                 en todas las estaciones no superaron el límite de 50 µg/m3 en los años 2022, 2023 y 2024. Cabe
+                 señalar que, para el año 2024 las concentraciones obtenidas, mediante el cálculo del percentil 98,
+
+                                                                                                                                              30
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 fueron las siguientes: 18 µg/m3 en la estación CPVK, 16 µg/m3 en estación Centro, 14 µg/m3 en
+                 estación CD 23 de Marzo y 13 µg/m3 en la estación Hospital El Cobre, las concentraciones obtenidas
+                 en todas las estaciones se encontraron por debajo del 36% del límite de la norma de 24 horas.
+
+                 En relación con la evaluación de la norma anual para MP2,5, mediante el cálculo del promedio de 3
+                 años de las concentraciones, entre el año 2022 y el año 2024, se concluyó que la norma no fue
+                 superada en las estaciones de la Red de Calama, respecto del límite establecido de 20 μg/m3, y
+                 tampoco el 80% del límite de la norma. Las concentraciones obtenidas como promedio anual fueron
+                 de: 12 µg/m3 para la estación de CPVK, 11 µg/m3 para la estación CD 23 de Marzo, 10 µg/m3 en
+                 estación Centro y 9 µg/m3 en estación Hospital El Cobre.
+
+                 Norma primaria de calidad del aire para SO2
+
+                 La evaluación de la norma primaria de 1 hora de SO2, que establece como límite 134 ppbv
+                 (350 µg/m3N), mediante el cálculo del promedio aritmético del percentil 99 de tres años calendario
+                 sucesivos, entre el año 2022 y el año 2024, se determinó que la norma primaria horaria no fue
+                 superada, registrando 9,80 ppbv, correspondiente al 7% del valor límite de la norma horaria.
+                 Respecto al análisis de los valores obtenidos del cálculo del percentil 99 de las concentraciones de
+                 1 hora, para cada uno de los años del periodo analizado, establece que la norma se considerará
+                 sobrepasada si fuere mayor o igual al doble del valor de la norma, bajo esta segunda condición (b)
+                 la estación no presenta superación.
+
+                 Complementariamente, se determina el número de días de excedencias a la norma de 1 hora de SO2
+                 para la estación, para los años 2022, 2023 y 2024, considerando el valor límite de 134 ppbv,
+                 resultando solamente un número de dos (2) excedencias a la norma de 1 hora en el año 2024 en la
+                 estación Hospital El Cobre.
+
+                 Por otra parte, la evaluación de la norma primaria de SO2, de 24 horas, que establece como límite
+                 de 57 ppbv (150 µg/m3N), determinó que la norma no fue superada y tampoco el 80% del valor
+                 límite de la norma de 24 horas. La concentración observada en la estación Hospital El Cobre como
+                 concentración promedio tres años fue de 4,38 ppbv, equivalente al 8% del valor límite de la norma
+                 de 24 horas. Respecto del análisis en un año calendario, la norma señala que podrá considerarse
+                 superada si la concentración determinada mediante el percentil 99 fuere mayor o igual al doble del
+                 valor de la norma, de acuerdo con esta segunda condición (b) la norma de 24 horas no fue superada
+                 durante el periodo en estudio.
+
+                 Respecto de la norma anual, al analizar el período comprendido entre el día 1° de enero de 2022 y
+                 el día 31 de diciembre de 2024, cuyo límite de la norma anual es de 23 ppbv (60 µg/m3N) como
+                 promedio de tres años consecutivos, se determinó que la norma anual no fue superada. La estación
+                 Hospital El Cobre tuvo una concentración promedio tres años de 1,18 ppbv, equivalente al 5% del
+                 valor límite de la norma anual. La evaluación realizada para un año calendario que señala que se
+
+                                                                                                                                              31
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+                 considera sobrepasada si fuere mayor o igual al doble del valor de la norma, tanto para el año 2022,
+                 2023, como el año 2024 no presentó superación para la segunda condición (b) descrita.
+                 Norma primaria de calidad del aire para Pb
+                 La revisión de la norma primaria de calidad del aire para plomo se realizó en base al periodo
+                 comprendido entre el 1° de enero de 2023 y el 31 de diciembre de 2024, considerándose válida la
+                 información generada de las mediciones de MP10 y la determinación de las concentraciones de
+                 plomo en filtros de MP10. Del análisis efectuado se pudo determinar lo siguiente:
+                 El número de los análisis químicos de plomo en filtros de MP10 es igual o superior al 70% mensual
+                 que exige la norma, por tanto, la información proporcionada por los propietarios de las estaciones
+                 cumplió con el número de concentraciones válidas para la evaluación de plomo en filtros de MP10.
+                 Del resultado de la evaluación de la norma anual de plomo, que fija como límite 0,5 µg/m3N, se
+                 verificó que las concentraciones obtenidas en las estaciones de la Red en estudio no superaron la
+                 norma anual de plomo encontrándose valores por debajo del 80% de la norma.
+
+                                                                                                                                              32
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+8. ANEXOS
+
+  N°                                              Nombre Anexo
+Anexo      - Resoluciones EMRP.
+           - Datos de calidad del aire para MP10, MP2,5, SO2 y Pb para el año 2024.
+   1
+   2
+
+                                                                                                                                              33
+
+                                                                                 Superintendencia del Medio Ambiente
+                                                    Teatinos 280 pisos 3, 7, 8 y 9, Santiago / contacto.sma@sma.gob.cl / www.sma.gob.cl
+
+                                                                                            DFZ-2025-553-II-NC
+
+Este documento ha sido firmado electrónicamente de acuerdo con la Ley Nº 19.799.
+

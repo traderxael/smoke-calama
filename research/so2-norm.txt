@@ -1,0 +1,117 @@
+Ministerio del Medio Ambiente    Septiembre 2025
+División de Calidad del Aire
+Departamento de Planes y Normas
+Sección Normas
+
+                                  Consulta Ciudadana del Anteproyecto:
+
+                   Norma Secundaria de Calidad del Aire Dióxido de Azufre (SO2)
+Actividad
+Por medio de la Resolución Exenta N° 5948, de 28 de agosto de 2025, del Ministerio del Medio
+Ambiente, se aprobó el anteproyecto de la norma secundaria de calidad del aire para SO2,
+elaborado a partir de la revisión del Decreto Supremo N° 22, de 2009, del MINSEGPRES y se
+ordenó someterlo a consulta pública.
+
+El extracto del anteproyecto fue publicado en el Diario oficial y en un diario de circulación
+nacional, el 6 y 7 de septiembre de 2025, respectivamente. La consulta pública estará abierta
+desde el 8 de septiembre al 3 de diciembre de 2025, en el sitio web:
+https://consultasciudadanas.mma.gob.cl
+
+Objetivo
+La presente norma tiene por objeto prevenir los efectos generados por las concentraciones en
+el aire de dióxido de azufre en los ecosistemas, considerando en especial su flora y
+biodiversidad, así como los servicios que estos proveen.
+
+Fundamentos
+
+El dióxido de azufre (SO2) es un contaminante atmosférico que puede generar efectos adversos
+tanto en los ecosistemas acuáticos como en los terrestres. La literatura científica describe
+impactos directos asociados a su deposición y a la formación de lluvia ácida, fenómenos que
+conducen a la acidificación de suelos y cuerpos de agua. Asimismo, produce efectos negativos
+sobre la vegetación, entre los que se incluyen la reducción del crecimiento y daños en el follaje.
+En conjunto, estas alteraciones inciden en el equilibrio y la estabilidad de los ecosistemas,
+comprometiendo sus condiciones ambientales.
+
+El decreto supremo N° 22 de 2009, del Ministerio Secretaría General de la Presidencia,
+estableció la norma secundaria de calidad del aire para SO2, con el objetivo de proteger y
+conservar los recursos naturales renovables del ámbito silvoagropecuario y la vida silvestre
+frente a los efectos agudos y crónicos generados por la exposición a este contaminante. Dicha
+norma definió límites máximos permisibles diferenciados entre el norte y sur del país,
+considerando promedios de 1 hora, 24 horas y anual. La revisión de antecedentes
+internacionales revela que los actuales valores nacionales resultan más permisivos en
+comparación con estándares adoptados en otras partes del mundo. A partir de estos
+antecedentes, la presente revisión normativa propone la aplicación de valores más exigentes a
+nivel nacional, para las concentraciones de 1 hora, 24 horas y anual, sin distinciones geográficas
+entre zonas norte y sur.
+Ministerio del Medio Ambiente    Septiembre 2025
+División de Calidad del Aire
+Departamento de Planes y Normas
+Sección Normas
+
+    La normativa vigente establece límites de SO2 valores de: 350 µg/Nm³ como promedio hora,
+    150 µg/Nm³ como promedio 24 horas y de 50 µg/Nm³ como promedio anual.
+
+    Condiciones de superación para SO2
+
+    La norma secundaria de calidad del aire para dióxido de azufre, se considerará sobrepasada,
+    cuando en cualquier estación de monitoreo con representatividad en Recursos Naturales para
+    SO2, se cumple alguna de las siguientes condiciones:
+
+a) Concentración de 1 hora: correspondiente a 133 ppbv, equivalente a 350 µg/Nm³. Se considerará
+sobrepasada la norma cuando se verifique a lo menos una de las siguientes condiciones: i. Si la media
+aritmética de tres años calendarios consecutivos del percentil 99 de las concentraciones de 1 hora
+registradas en cada año, es igual o superior al valor que la norma establece. ii. Si en un año
+calendario, el valor del percentil 99 de las concentraciones de 1 hora, es igual o superior al doble
+del valor establecido por la norma.
+b) Concentración de 24 horas: correspondiente a 57 ppbv, equivalente a 150 µg/Nm³. Se
+considerará sobrepasada la norma cuando se verifique a lo menos una de las siguientes condiciones:
+i. Si la media aritmética de tres años calendarios consecutivos del percentil 99 de las
+concentraciones de 24 horas, registradas durante cada año, es igual o superior al valor que la norma
+establece.
+ii. Si en un año calendario, el valor del percentil 99 de las concentraciones de 24 horas registradas,
+es igual o superior al doble del valor establecido por la norma.
+
+c) Concentración anual: correspondiente a 19 ppbv, equivalente a 50 µg/Nm³. Se considerará
+sobrepasada la norma cuando se verifique a lo menos una de las siguientes condiciones:
+i. Si la media aritmética de las concentraciones anuales de tres años calendarios consecutivos es
+mayor o igual al valor de concentración máxima que la norma establece.
+ii. Si en un año calendario, el valor de concentración anual, es igual o superior al doble del valor de
+concentración máximo establecido por la norma.
+
+Monitoreo
+Las metodologías de medición para el monitoreo, la vigilancia y la facultad de calificar una estación
+de monitoreo como Estación Monitora con Representatividad de Recursos Naturales (EMRRN-SO2),
+corresponderán a la Superintendencia del Medio Ambiente. Evaluación del cumplimiento de la
+norma: Para evaluar el cumplimiento de los límites de concentración de dióxido de azufre, podrán
+utilizarse los valores expresados en ppbv o µg/Nm³, siempre que provengan de estaciones de
+monitoreo calificadas como EMRRN para SO2.
+      Ministerio del Medio Ambiente                        Septiembre 2025
+      División de Calidad del Aire
+      Departamento de Planes y Normas
+      Sección Normas
+
+Evaluación del cumplimiento de la norma
+
+Para  evaluar         el                 cumplimiento  de  los
+
+límites de concentración de dióxido de azufre, podrán utilizarse los valores expresados
+
+en ppbv o μg/Nm3, siempre que provengan de estaciones de monitoreo calificadas
+
+como EMRRN para SO2.
+
+Fiscalización
+Corresponderá a la Superintendencia del Medio Ambiente fiscalizar el cumplimiento de las
+disposiciones del presente decreto.
+
+Vigencia y Derogación
+La norma entrará en vigencia el 1° de enero próximo a su publicación en el Diario Oficial. Desde
+entonces quedará derogado el Decreto Supremo N° 22, de 2009, del Ministerio Secretaría
+General de la Presidencia.
+
+Resultado AGIES
+El Análisis General de Impacto Económico y Social (AGIES) realizado en el proceso de revisión
+del D.S. N° 22/2009, correspondiente a la la norma secundaria de calidad del aire para dióxido
+de azufre (SO2), no presenta costos ni beneficios adicionales atribuibles a la modificación de los
+límites normativos, manteniéndose la situación actual de la normativa.
+

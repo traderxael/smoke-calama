@@ -1,0 +1,43 @@
+# Descriptor local del sitio publicado (contiene identificadores de cuenta)
+.*.qoder.site
+.qoder/
+
+# Arnés de verificación
+research/pw/node_modules/
+research/pw/package-lock.json
+research/chrome-profile-*/
+research/shots/
+research/*.err
+research/*.bin
+research/server.log
+research/*-summary.txt
+research/a11y.json
+research/contrast.json
+research/final-check.json
+research/test-report.json
+research/layout.json
+
+# Respaldos y borradores
+research/*-v1.*
+research/calama-data.backup.js
+research/index-v1.html
+research/styles-v1.css
+research/app-v1.js
+
+# Documentos de terceros (se enlazan en docs/, no se redistribuyen)
+research/*.pdf
+
+# Sistema
+Thumbs.db
+.DS_Store
+
+# Copias HTML de páginas de terceros y scripts de depuración
+research/*.html
+research/pw/dbg-*.js
+research/pw/spike.js
+research/pw/check.js
+research/pw/test.js
+research/pw/style-test.js
+research/pw/shot-card*.js
+research/pw/final-check.js
+research/pw/shots.js

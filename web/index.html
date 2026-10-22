@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calama Respira · El aire de la ciudad, en 3D y en el tiempo</title>
+  <meta name="description" content="Mapa 3D interactivo de la contaminación del aire en Calama con datos oficiales de la SMA y SINCA. Mueve el tiempo por hora, día o mes, compara con la norma chilena y la OMS, y aprende con un modo para niños y niñas.">
+  <meta name="theme-color" content="#F6EFE3">
+  <meta property="og:title" content="Calama Respira · Mapa 3D del aire, en el tiempo">
+  <meta property="og:description" content="Estaciones de MP10, MP2,5 y SO₂ sobre el relieve real de Calama. Anima por hora, por día o por mes y compara con la norma chilena y las guías de la OMS.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Baloo+2:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-mode="kid">
+  <a class="skip-link" href="#mapa">Saltar al mapa interactivo</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="19" r="9.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M7 32h30M12 38h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+        <circle cx="30.5" cy="12.5" r="2.5" fill="#D2622F"/>
+      </svg>
+      <span class="brand-type">CALAMA<span>RESPIRA</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones del sitio">
+      <a href="#mapa">Mapa 3D</a>
+      <a href="#pulso">Pulso</a>
+      <a href="#evidencia">Evidencia</a>
+      <a href="#contaminantes">Contaminantes</a>
+      <a href="#colegios">Colegios</a>
+      <a href="#planes">Planes</a>
+      <a href="#juego">Juego</a>
+      <a href="#actua">Actúa</a>
+    </nav>
+    <div class="header-tools">
+      <div class="mode-switch" role="group" aria-label="Cómo quieres leer el sitio">
+        <button type="button" class="mode-btn is-on" aria-pressed="true" data-mode="kid">Para niños</button>
+        <button type="button" class="mode-btn" aria-pressed="false" data-mode="tech">Para adultos</button>
+      </div>
+      <p class="header-stamp"><span class="pulse" aria-hidden="true"></span> Datos oficiales · corte 19.10.2026</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ MAPA 3D ============ -->
+    <section class="hero" id="mapa" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="section-kicker"><span>01</span> Mapa 3D con el tiempo</p>
+        <h1 id="hero-title">
+          <span class="kid">Mira el aire de Calama, <em>columna a columna</em>.</span>
+          <span class="tech">El aire de Calama sobre su relieve, <em>hora a hora</em>.</span>
+        </h1>
+        <p class="hero-lede">
+          <span class="kid">Cada columna es una estación del aire. Si crece, hay más polvo. Dale al botón de play y mira cómo cambia el día.</span>
+          <span class="tech">Cada columna es una estación de la red Calama: su altura es la concentración medida. Anima por hora, por día o por mes y compáralo con la norma chilena y la guía de la OMS.</span>
+        </p>
+
+        <div class="air-check" id="air-check">
+          <div class="air-face" id="air-face" aria-hidden="true"></div>
+          <div class="air-check-body">
+            <p class="air-check-kicker" id="air-check-kicker">Estado del aire</p>
+            <p class="air-check-value"><strong id="air-check-value">—</strong><span id="air-check-unit">µg/m³</span></p>
+            <p class="air-check-note" id="air-check-note" aria-live="polite">Elige una estación para ver su número.</p>
+          </div>
+          <p class="air-check-vs" id="air-check-vs"></p>
+        </div>
+
+        <ul class="hero-facts">
+          <li><strong>166.334</strong><span>personas en Calama (INE, Censo 2024)</span></li>
+          <li><strong>2.260 m</strong><span>sobre el nivel del mar, en una cuenca</span></li>
+          <li><strong>6</strong><span>estaciones de monitoreo en la red</span></li>
+        </ul>
+      </div>
+
+      <div class="map-shell" id="map-shell">
+        <div class="map-topbar">
+          <div class="seg seg-mini" role="group" aria-label="Vista de la cámara">
+            <button type="button" class="seg-btn is-on" data-view="general">Vista general</button>
+            <button type="button" class="seg-btn" data-view="ciudad">La ciudad</button>
+            <button type="button" class="seg-btn" data-view="red">Toda la red</button>
+          </div>
+          <div class="seg seg-mini" role="group" aria-label="Tipo de mapa">
+            <button type="button" class="seg-btn is-on" data-base="mapa">Mapa</button>
+            <button type="button" class="seg-btn" data-base="satelite">Satélite</button>
+          </div>
+        </div>
+
+        <div id="map" role="region" aria-label="Mapa en tres dimensiones de Calama con las estaciones de monitoreo. Usa los controles de abajo para cambiar el contaminante y animar el tiempo." tabindex="0"></div>
+
+        <div class="map-fallback" id="map-fallback" hidden>
+          <p>Este navegador no pudo dibujar el mapa en 3D. La tabla de datos tiene los mismos números.</p>
+        </div>
+
+        <div class="map-legend" id="map-legend" aria-live="polite"></div>
+
+        <div class="time-dock" id="time-dock">
+          <div class="dock-row">
+            <div class="seg" role="group" aria-label="Granularidad del tiempo">
+              <button type="button" class="seg-btn is-on" data-tmode="dia">Día</button>
+              <button type="button" class="seg-btn" data-tmode="mes">Mes</button>
+              <button type="button" class="seg-btn" data-tmode="anio">Año</button>
+            </div>
+            <label class="dock-select" id="group-wrap">
+              <span class="dock-select-label" id="frame-group-label">Mes</span>
+              <select id="frame-group"></select>
+            </label>
+            <label class="dock-select" id="year-wrap">
+              <span class="dock-select-label">Año</span>
+              <select id="frame-year">
+                <option value="25">2025</option>
+                <option value="26" selected>2026</option>
+              </select>
+            </label>
+            <p class="dock-frame" id="frame-label" aria-live="polite">—</p>
+          </div>
+          <div class="dock-row dock-scrub">
+            <button type="button" class="play-btn" id="play-btn" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+              <span class="play-label">Animar el día</span>
+            </button>
+            <div class="scrub-wrap">
+              <input type="range" id="scrubber" min="0" max="23" step="1" value="7"
+                     aria-label="Instante mostrado en el mapa" aria-valuetext="07:00">
+              <div class="scrub-ticks" id="scrub-ticks" aria-hidden="true"></div>
+            </div>
+            <label class="dock-select">
+              <span class="dock-select-label">Velocidad</span>
+              <select id="speed">
+                <option value="1100">Lenta</option>
+                <option value="620" selected>Normal</option>
+                <option value="300">Rápida</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <aside class="station-card" id="station-card" hidden aria-live="polite" tabindex="-1"></aside>
+      </div>
+
+      <div class="picker-row">
+        <h2 class="sr-only">Contaminante mostrado en el mapa</h2>
+        <div class="pollutant-chips" id="pollutant-chips" role="group" aria-label="Contaminante mostrado en el mapa"></div>
+        <div class="picker-extra">
+          <button type="button" class="chip-toggle" id="sources-toggle" aria-pressed="false">Mostrar fuentes de polvo</button>
+          <a class="chip-link" href="#datos">Ver la tabla de datos</a>
+        </div>
+      </div>
+      <p class="map-hint">
+        <span class="kid">Toca una columna para saber cuánto aire respira esa parte de la ciudad.</span>
+        <span class="tech">Arrastra para rotar e inclinar el relieve. Toca una columna para abrir la ficha de la estación.</span>
+        <span id="hint-extra"></span>
+      </p>
+    </section>
+
+    <!-- ============ PULSO ============ -->
+    <section class="section pulso" id="pulso" aria-labelledby="pulso-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>02</span> El pulso del aire</p>
+          <h2 id="pulso-title">
+            <span class="kid">El día en que el aire <em>respira</em>.</span>
+            <span class="tech">El ciclo diario, mensual y anual del <em>polvo</em>.</span>
+          </h2>
+          <p class="section-lede">
+            <span class="kid">El polvo no es igual todo el día. Mira la línea: sube y baja. Cambia entre día, mes y año arriba y la línea se mueve con el mapa.</span>
+            <span class="tech">La serie de abajo sigue el marco temporal del mapa: perfil horario, serie diaria o promedio mensual, con la norma chilena y la guía de la OMS marcadas.</span>
+          </p>
+        </div>
+        <div class="pulso-read" id="pulso-read"></div>
+      </div>
+      <figure class="chart-card chart-pulse">
+        <figcaption class="chart-head">
+          <span class="chart-kicker" id="pulse-kicker">MP10 · perfil horario</span>
+          <h3 id="pulse-title">La madrugada y la tarde</h3>
+          <p id="pulse-sub">µg/m³ por hora del día.</p>
+        </figcaption>
+        <div class="chart" id="chart-pulse" role="img" aria-label="Gráfico de líneas con la serie seleccionada."></div>
+        <div class="chart-legend" id="chart-pulse-legend"></div>
+        <p class="chart-source" id="pulse-source">Fuente: SINCA, registros publicados.</p>
+        <details class="chart-data"><summary>Ver los datos de esta serie</summary><div id="table-pulse"></div></details>
+      </figure>
+      <div class="pulse-notes" id="pulse-notes"></div>
+    </section>
+
+    <!-- ============ EVIDENCIA ============ -->
+    <section class="section evidence" id="evidencia" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <p class="section-kicker"><span>03</span> La evidencia</p>
+        <h2 id="evidence-title">No es solo un día malo.<br>Es el <em>promedio</em>.</h2>
+        <p class="section-lede">
+          <span class="kid">A veces el cielo se ve naranja y otras no, aunque el polvo está. Lo que importa es lo que pasa casi todos los días.</span>
+          <span class="tech">El MP10 de Calama no necesita episodios extremos para superar la norma: en 2025 ningún día urbano superó el límite diario de 130 µg/m³, pero el promedio trianual de dos estaciones quedó sobre la norma anual.</span>
+        </p>
+      </div>
+
+      <div class="evidence-grid">
+        <figure class="chart-card chart-trend">
+          <figcaption class="chart-head">
+            <span class="chart-kicker">MP10 · promedio anual</span>
+            <h3>El promedio que no cede</h3>
+            <p>µg/m³ por estación, 2021–2025. La línea punteada marca la norma anual de 50; la guía de la OMS es 15.</p>
+          </figcaption>
+          <div class="chart" id="chart-trend" role="img" aria-label="Gráfico de líneas con el promedio anual de MP10 entre 2021 y 2025 para cuatro estaciones de Calama. Dos estaciones superan la norma anual de 50 microgramos por metro cúbico en el periodo 2022-2024."></div>
+          <div class="chart-legend" id="chart-trend-legend"></div>
+          <p class="chart-source">Fuente: SMA, informes DFZ-2024-211 y DFZ-2025-553. 2025: SINCA, registro publicado sujeto a validación.</p>
+          <details class="chart-data"><summary>Ver los datos</summary><div id="table-trend"></div></details>
+        </figure>
+
+        <aside class="insight-card">
+          <p class="insight-kicker">La paradoja del polvo</p>
+          <p class="insight-big">0 días</p>
+          <p class="insight-copy">superaron el límite diario de MP10 de 130 µg/m³ en 2025 en las estaciones urbanas. Aun así, el promedio trianual 2022–2024 de <strong>23 de Marzo</strong> y <strong>CPVK</strong> superó la norma anual de 50.</p>
+          <hr>
+          <p class="insight-small">El riesgo no siempre llega como una nube: también es el polvo de todos los días.</p>
+          <div class="insight-mini" id="insight-mini"></div>
+          <p class="insight-source">Cálculo propio con datos SINCA 2025 y SMA 2022–2024.</p>
+        </aside>
+
+        <figure class="chart-card chart-emissions">
+          <figcaption class="chart-head">
+            <span class="chart-kicker">Inventario de emisiones · 2016</span>
+            <h3>El 98% del MP10 viene de la minería</h3>
+            <p>Toneladas al año de MP10 de las faenas del plan. El resto es polvo urbano, tránsito y obras.</p>
+          </figcaption>
+          <div class="chart" id="chart-emissions" role="img" aria-label="Gráfico de barras con las emisiones de MP10 de las faenas mineras: División Chuquicamata 15.503 toneladas, Radomiro Tomic 11.297, Ministro Hales 3.765 y Tranque Talabre 3.377, que suman el 98 por ciento del total."></div>
+          <p class="chart-source">Fuente: D.S. N° 5/2022, inventario base 2016.</p>
+          <details class="chart-data"><summary>Ver los datos</summary><div id="table-emissions"></div></details>
+        </figure>
+
+        <figure class="chart-card chart-pm25">
+          <figcaption class="chart-head">
+            <span class="chart-kicker">MP2,5 · promedio anual 2024</span>
+            <h3>Bajo la norma chilena, sobre la OMS</h3>
+            <p>µg/m³. La norma anual de Chile es 20; la guía de la OMS, 5. Las cuatro estaciones cumplen una y fallan la otra.</p>
+          </figcaption>
+          <div class="chart" id="chart-pm25" role="img" aria-label="Gráfico de barras del promedio anual de MP2,5 en 2024 para cuatro estaciones. Todas están bajo la norma chilena de 20 microgramos por metro cúbico, pero por encima de la guía anual de la OMS de 5."></div>
+          <p class="chart-source">Fuente: SMA, DFZ-2025-553-II-NC. Guía: OMS 2021.</p>
+          <details class="chart-data"><summary>Ver los datos</summary><div id="table-pm25"></div></details>
+        </figure>
+      </div>
+
+      <div class="so2-strip">
+        <div class="so2-strip-copy">
+          <span class="chart-kicker">SO₂ · P99 diario 2026</span>
+          <h3>El azufre no es el problema urbano de hoy</h3>
+          <p>En las estaciones urbanas, el P99 diario de SO₂ está entre <strong>9,7 y 21,2 µg/m³</strong>, muy por debajo de la norma diaria de 150. El foco está en el polvo.</p>
+        </div>
+        <div class="so2-strip-bars" id="so2-strip" aria-label="Comparación del P99 diario de SO2 con la norma de 150 microgramos por metro cúbico"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTAMINANTES ============ -->
+    <section class="section pollutants" id="contaminantes" aria-labelledby="pollutants-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>04</span> Qué se mide</p>
+          <h2 id="pollutants-title">Cuatro cosas<br>que respira Calama.</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">No todo lo que ensucia el aire es igual. Hay polvo que se ve y hay cosas tan chiquitas que llegan hasta la sangre.</span>
+          <span class="tech">No todo contaminante se comporta igual. Cambian de tamaño, de origen y de efecto. Esta es la diferencia entre el polvo que ves y el que llega al fondo del pulmón.</span>
+        </p>
+      </div>
+
+      <div class="pollutant-cards" id="pollutant-cards"></div>
+
+      <div class="norm-compare">
+        <div class="norm-compare-head">
+          <h3>La norma chilena no es la guía de la OMS</h3>
+          <p>
+            <span class="kid">El límite que usa Chile y el que recomienda la OMS no son el mismo número.</span>
+            <span class="tech">La legislación y la ciencia no fijan el mismo umbral. Estas son las brechas para exposición anual (MP10 y MP2,5) y diaria (SO₂).</span>
+          </p>
+        </div>
+        <div class="norm-rows" id="norm-rows"></div>
+        <p class="norm-note">MP10 y MP2,5: norma anual chilena (D.S. 12/2022 y D.S. 12/2011) y guía anual OMS 2021. SO₂: norma diaria chilena de 150 µg/m³ (D.S. 104/2018) y guía diaria OMS de 40 µg/m³. Las normas chilenas de MP se evalúan como promedio de tres años.</p>
+      </div>
+    </section>
+
+    <!-- ============ COLEGIOS ============ -->
+    <section class="section study" id="colegios" aria-labelledby="study-title">
+      <div class="study-inner">
+        <div class="study-copy">
+          <p class="section-kicker light"><span>05</span> Investigación · 2026</p>
+          <h2 id="study-title">El polvo que<br>llega al <em>aula</em>.</h2>
+          <p class="study-lede">
+            <span class="kid">No hace falta estar cerca de la mina para que el polvo llegue a la sala de clases. En 38 colegios de Calama lo encontraron dentro de las salas.</span>
+            <span class="tech">Un estudio midió el polvo acumulado dentro y fuera de 38 colegios de Calama y encontró metales enriquecidos respecto del fondo natural del desierto.</span>
+          </p>
+          <p>La mineralogía y los isótopos apuntaron a partículas oxidadas de origen minero, no al tráfico. Las concentraciones interiores fueron similares a las exteriores: el polvo entra y se queda.</p>
+          <a class="btn btn-light" href="https://www.sciencedirect.com/science/article/pii/S0160412026004368" target="_blank" rel="noopener">Leer el estudio <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="study-media">
+          <img src="assets/chuquicamata.jpg" alt="Vista aérea del rajo de la mina Chuquicamata, en el desierto de Atacama." width="1920" height="1691" loading="lazy">
+          <figcaption>Mina de Chuquicamata, 2016. Foto: Diego Delso / Wikimedia Commons, CC BY-SA 4.0.</figcaption>
+        </figure>
+      </div>
+
+      <div class="metal-grid" id="metal-grid" aria-label="Concentraciones medianas de metales en el polvo de las salas"></div>
+
+      <div class="study-bottom">
+        <blockquote class="study-quote">
+          <p>“El plomo y el arsénico son particularmente preocupantes durante la infancia por sus posibles efectos en el desarrollo neurológico y cognitivo.”</p>
+          <footer><strong>Estela Blanco</strong> · Escuela de Salud Pública UC, coautora</footer>
+        </blockquote>
+        <div class="school-actions">
+          <h3>Qué puede hacer un colegio</h3>
+          <ul>
+            <li><span>01</span> Mejorar sellos y filtros en puertas y ventanas para reducir el ingreso de polvo.</li>
+            <li><span>02</span> Limpiar con paño húmedo y evitar barrer en seco, que vuelve a suspender las partículas.</li>
+            <li><span>03</span> Ventilar con filtración cuando el aire exterior esté cargado, sin encerrar el aula.</li>
+          </ul>
+          <p class="school-note">Recomendaciones de la coautora del estudio, no una normativa vigente.</p>
+        </div>
+      </div>
+      <p class="study-caveat">Estudio científico independiente publicado en <em>Environment International</em>. No es un monitoreo oficial ni mide exposición personal. Chile no exige medir metales en el polvo de espacios cerrados.</p>
+    </section>
+
+    <!-- ============ FUENTES ============ -->
+    <section class="section sources-section" id="fuentes" aria-labelledby="sources-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>06</span> Fuentes</p>
+          <h2 id="sources-title">De dónde<br>viene el polvo.</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">El polvo que respira la ciudad viene sobre todo del complejo minero que está al norte, a unos 15 km.</span>
+          <span class="tech">El inventario de 2016 es claro: las faenas mineras del área del plan emiten el 98% del MP10. La ciudad y el tránsito aportan el resto. El viento hace lo suyo.</span>
+        </p>
+      </div>
+
+      <div class="source-layout">
+        <div class="source-list" id="source-list"></div>
+        <aside class="wind-card">
+          <p class="chart-kicker">Meteorología</p>
+          <h3>Una cuenca a 2.260 m</h3>
+          <p>Calama está rodeada de cordones de 3.000 a 6.000 m. El 90% de los casos, la circulación es anabática y catabática: vientos que suben de día y bajan de noche.</p>
+          <p>Las concentraciones altas de MP10 se asocian a vientos fuertes del <strong>oeste y noroeste</strong>, justo donde se ubica el complejo minero.</p>
+          <div class="wind-rose" aria-hidden="true">
+            <span class="wind-label n">N</span>
+            <span class="wind-label e">E</span>
+            <span class="wind-label s">S</span>
+            <span class="wind-label w">O</span>
+            <span class="wind-arrow w">→</span>
+            <span class="wind-arrow nw">↘</span>
+            <span class="wind-city">Calama</span>
+          </div>
+          <p class="wind-source">Fuente: D.S. N° 5/2022, antecedentes meteorológicos (DICTUC, 2019).</p>
+        </aside>
+      </div>
+
+      <div class="source-cta">
+        <div>
+          <h3>El complejo minero está a unos 15 km al norte</h3>
+          <p>Abre el mapa con las fuentes industriales para ubicar el rajo, el tranque de relaves y el puerto seco.</p>
+        </div>
+        <button class="btn btn-dark" id="show-sources" type="button">Ver fuentes en el mapa <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <!-- ============ PLANES DE RECUPERACIÓN ============ -->
+    <section class="section recovery" id="planes" aria-labelledby="recovery-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>07</span> Tratamiento y recuperación</p>
+          <h2 id="recovery-title">Qué se está haciendo<br>para <em>limpiar</em> el aire.</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">Calama no está sin plan para siempre: hay medidas funcionando ahora y un plan nuevo en camino. También hay proyectos para recuperar árboles, plazas y la red que mide el aire.</span>
+          <span class="tech">Tras la anulación del PDA de 2022, la ciudad opera con medidas provisionales y complementarias (R.E. 204/2024) mientras se elabora un nuevo plan. En paralelo se anuncia un Programa de Recuperación Ambiental y Social (PRAS) con gobernanza local (CRAS).</span>
+        </p>
+      </div>
+
+      <div class="recovery-grid">
+        <article class="recovery-card">
+          <span class="recovery-tag">Vigente · desde el 12.03.2024</span>
+          <h3>Cortar el polvo en la faena</h3>
+          <p>La R.E. 204/2024 fija <strong>14 medidas provisionales y 12 complementarias</strong>, ejecutadas en su mayoría por Codelco: barrido y lavado de calles acordado con la Municipalidad, estabilización de sitios eriazos, límites de eficiencia en chancadores y harneros, control del polvo de camiones CAEX y de las tronaduras, y reemplazo de combustible por gas natural en las calderas.</p>
+          <p class="recovery-fact">La Procesadora de Residuos Industriales tiene un tope de 3,42 t/año de MP10 hasta enero de 2026 y de 2,84 t/año después.</p>
+        </article>
+        <article class="recovery-card">
+          <span class="recovery-tag">En elaboración</span>
+          <h3>Un plan nuevo, con otra red</h3>
+          <p>El PDA anterior fue anulado porque su red de monitoreo no representaba a toda la población: quedaban fuera el Servicio Médico Legal y Chiu Chiu. El nuevo proceso sumó un <strong>Comité Operativo de 19 servicios públicos</strong>, presentó en 2026 el estudio de antecedentes y el inventario de emisiones actualizado, y trabaja en <strong>seis mesas</strong>: minería, movilidad sostenible, infraestructura urbana, fiscalización, educación y soluciones basadas en la naturaleza.</p>
+        </article>
+        <article class="recovery-card">
+          <span class="recovery-tag">En conformación</span>
+          <h3>Recuperar el territorio, no solo el aire</h3>
+          <p>Se anuncia un <strong>Programa de Recuperación Ambiental y Social (PRAS)</strong> para Calama, con un Consejo local (CRAS) que dará cuenta de los avances. Las medidas complementarias ya incluyen una <strong>franja de 40.000 m² de árboles</strong> entre el Tranque Talabre y Chiu Chiu, el vivero de <strong>Chacras Viejas</strong>, mejoramiento de espacios públicos 2024–2026, un fondo concursable de energías limpias familiares y monitores ambientales comunitarios.</p>
+        </article>
+        <article class="recovery-card">
+          <span class="recovery-tag">Dato a vigilar</span>
+          <h3>La señal que hay que vigilar</h3>
+          <p>Las concentraciones de MP10 <strong>bajaron desde 2024</strong> y la tendencia se mantuvo en 2025. Los datos preliminares de 2026 quedan bajo el límite que define la saturación, pero el promedio trianual todavía incluye 2023 y la SMA debe validar los registros antes de cualquier conclusión. Además, el Ministerio del Medio Ambiente ingresó a Contraloría la <strong>norma primaria de arsénico</strong>.</p>
+          <p class="recovery-fact">Mejorar no es lo mismo que estar resuelto: la norma anual de MP10 sigue en 50 µg/m³ y la guía de la OMS, en 15.</p>
+        </article>
+      </div>
+
+      <div class="plan-table-wrap">
+        <h3>Estado de los instrumentos</h3>
+        <div class="data-table">
+          <table>
+            <caption>Qué está vigente, en trámite o sin iniciar en Calama (consulta 22.10.2026)</caption>
+            <thead><tr><th scope="col">Instrumento</th><th scope="col">Estado</th><th scope="col">Qué hace</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Medidas provisionales R.E. 204/2024</th><td><span class="state is-on">Vigente</span></td><td>14 + 12 medidas para bajar el MP10 mientras se elabora el PDA; auditadas por Contraloría (2024–2026).</td></tr>
+              <tr><th scope="row">Nuevo PDA de Calama</th><td><span class="state is-work">En elaboración</span></td><td>Comité de 19 servicios, seis mesas y anteproyecto pendiente; debe corregir la representatividad de la red.</td></tr>
+              <tr><th scope="row">PRAS / CRAS</th><td><span class="state is-work">En conformación</span></td><td>Programa y consejo local de recuperación ambiental y social.</td></tr>
+              <tr><th scope="row">Red de monitoreo</th><td><span class="state is-work">Modernización</span></td><td>Nueva red en marcha desde 2024, con estaciones que faltaban en el plan anulado.</td></tr>
+              <tr><th scope="row">Norma primaria de arsénico</th><td><span class="state is-todo">En trámite</span></td><td>Ingresada a Contraloría; la red de Calama detecta arsénico en el material particulado.</td></tr>
+              <tr><th scope="row">Norma de metales en polvo interior</th><td><span class="state is-todo">Sin norma</span></td><td>Chile no fija límites para As, Cu ni Mo en polvo de espacios cerrados.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="plan-sources">
+        Fuentes: <a href="https://www.bcn.cl/leychile/navegar?idNorma=1201688" target="_blank" rel="noopener">R.E. 204/2024 (BCN)</a> ·
+        <a href="https://1ta.cl/mma-dicta-medidas-provisionales/" target="_blank" rel="noopener">Primer Tribunal Ambiental, 03.2024</a> ·
+        <a href="https://mma.gob.cl/realizan-nueva-sesion-del-comite-operativo-ampliado-para-la-elaboracion-del-pda-de-calama/" target="_blank" rel="noopener">MMA, Comité Operativo Ampliado 2026</a> ·
+        <a href="https://www.enlalinea.cl/contraloria-audita-medidas-ambientales-en-calama-y-seremi-informa-avances-en-nuevo-plan-de-descontaminacion/" target="_blank" rel="noopener">Contraloría y avances del PDA, 2026</a> ·
+        <a href="https://mma.gob.cl/antofagasta/plan-de-descontaminacion-atmosferica-de-calama/" target="_blank" rel="noopener">MMA, Plan de Calama</a>
+      </p>
+    </section>
+
+    <!-- ============ HISTORIA ============ -->
+    <section class="section timeline-section" id="historia" aria-labelledby="timeline-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>08</span> Cronología</p>
+          <h2 id="timeline-title">El plan que<br>no llegó a regir.</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">Calama lleva mucho tiempo con este problema. Estos son los momentos que lo explican.</span>
+          <span class="tech">Calama fue declarada zona saturada en 2009. El plan de descontaminación llegó en 2022 y fue anulado en 2023. Desde entonces, la ciudad opera con medidas provisionales y un nuevo proceso en curso.</span>
+        </p>
+      </div>
+
+      <ol class="timeline" id="timeline"></ol>
+
+      <div class="timeline-callout">
+        <span class="callout-mark" aria-hidden="true">!</span>
+        <p><strong>Hoy no hay un PPDA vigente en Calama.</strong> Rigen medidas provisionales y el Ministerio del Medio Ambiente elabora un nuevo plan. Mientras tanto, los promedios anuales de MP10 siguen sobre la norma en parte de la red.</p>
+      </div>
+    </section>
+
+    <!-- ============ JUEGO ============ -->
+    <section class="section quiz-section" id="juego" aria-labelledby="quiz-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>09</span> Para jugar</p>
+          <h2 id="quiz-title">¿Cuánto sabes<br>del <em>aire</em> que respiras?</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">Cuatro preguntas sobre lo que acabas de ver en el mapa. Puedes equivocarte: cada respuesta te cuenta algo.</span>
+          <span class="tech">Cuatro preguntas de comprobación basadas en los datos del sitio, con retroalimentación y referencia a la fuente.</span>
+        </p>
+      </div>
+      <div class="quiz" id="quiz"></div>
+    </section>
+
+    <!-- ============ ACTÚA ============ -->
+    <section class="section act" id="actua" aria-labelledby="act-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>10</span> Actúa</p>
+          <h2 id="act-title">Respirar también<br>es una decisión<br><em>pública</em>.</h2>
+        </div>
+        <p class="section-lede">
+          <span class="kid">Los números no limpian el aire. Estas son cosas que puedes hacer tú, tu familia y tu curso.</span>
+          <span class="tech">Los datos no cambian el aire por sí solos. Estas son acciones concretas para reducir la exposición y exigir mejores decisiones.</span>
+        </p>
+      </div>
+
+      <div class="action-grid" id="action-grid"></div>
+
+      <p class="act-disclaimer">Esta página es educativa y no reemplaza las indicaciones de la autoridad sanitaria ni un sistema oficial de alerta.</p>
+    </section>
+
+    <!-- ============ METODOLOGÍA ============ -->
+    <section class="section method" id="metodologia" aria-labelledby="method-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>11</span> Metodología y datos</p>
+          <h2 id="method-title">Cómo leer<br>estos datos.</h2>
+        </div>
+        <p class="section-lede">Todo lo que aparece en el mapa viene de registros públicos. Aquí están las definiciones, los periodos y las advertencias para no sacar conclusiones de más.</p>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-card">
+          <h3>Cómo se anima el tiempo</h3>
+          <p><strong>Día</strong> usa el promedio de cada hora del día, calculado sobre un mes completo (enero = verano, julio = invierno, 2025). <strong>Mes</strong> usa el promedio diario de cada día del mes. <strong>Año</strong> usa el promedio mensual. Todos los valores salen de las series oficiales de SINCA.</p>
+        </article>
+        <article class="method-card">
+          <h3>EMRP</h3>
+          <p>Estación de Monitoreo con Representatividad Poblacional. Es la condición que permite usar una estación para evaluar el cumplimiento de una norma. Calama tiene cuatro EMRP urbanas para MP10 y MP2,5.</p>
+        </article>
+        <article class="method-card">
+          <h3>P98 y P99</h3>
+          <p>El percentil 98 o 99 es el valor que deja por debajo al 98% o 99% de las mediciones. Las normas diarias de MP usan P98; la de SO₂ usa P99. No es un promedio.</p>
+        </article>
+        <article class="method-card">
+          <h3>Promedio trianual</h3>
+          <p>Las normas anuales de MP10 y MP2,5 se evalúan con el promedio de tres años calendario consecutivos. Por eso la evidencia muestra el periodo 2022–2024.</p>
+        </article>
+        <article class="method-card">
+          <h3>Validado vs. publicado</h3>
+          <p>Los valores 2022–2024 fueron validados por la SMA. Los de 2025–2026 provienen de SINCA y pueden cambiar tras la validación. Se muestran como contexto, no como cumplimiento oficial.</p>
+        </article>
+        <article class="method-card">
+          <h3>µg/m³ y ppb</h3>
+          <p>El MP se mide en microgramos por metro cúbico. El SO₂ de la red se publica en ppb y aquí se convierte a µg/m³ (1 ppb ≈ 2,62 µg/m³) para compararlo con la norma.</p>
+        </article>
+        <article class="method-card">
+          <h3>Altura de las columnas</h3>
+          <p>La altura es proporcional a la concentración dentro de una escala fija por contaminante (MP10 hasta 140, MP2,5 hasta 60, SO₂ hasta 60 µg/m³). Por eso dos columnas del mismo alto, en contaminantes distintos, no significan lo mismo.</p>
+        </article>
+        <article class="method-card">
+          <h3>Mapa, no modelo</h3>
+          <p>El relieve y el sombreado vienen de topografía pública (Terrain Tiles de Mapzen). Las fuentes se marcan en su ubicación aproximada: no dibujan una pluma de dispersión ni un área de impacto. Las estaciones usan sus coordenadas UTM oficiales.</p>
+        </article>
+      </div>
+
+      <div class="station-table-wrap" id="datos">
+        <h3>Red de monitoreo y datos del marco temporal</h3>
+        <p class="table-lede">La misma información del mapa, en texto. Si algo no se puede ver en el mapa, está acá.</p>
+        <div class="table-tools">
+          <button type="button" class="btn btn-ghost" id="csv-btn">Descargar CSV <span aria-hidden="true">↓</span></button>
+          <p class="table-note" id="table-note">—</p>
+        </div>
+        <div id="station-table"></div>
+        <div id="frame-table"></div>
+      </div>
+
+      <div class="sources-block">
+        <h3>Fuentes y notas</h3>
+        <ol class="citation-list" id="citation-list"></ol>
+        <h3 class="credits-title">Tecnología y licencias</h3>
+        <p class="credits">Mapa: <a href="https://maplibre.org/" target="_blank" rel="noopener">MapLibre GL JS</a> (BSD-3). Relieve: <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener">Terrain Tiles de Mapzen</a> en formato terrarium (CC BY 4.0). Cartografía base: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> (ODbL) y <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f084bac1236" target="_blank" rel="noopener">World Imagery de Esri</a> y sus proveedores de datos. Gráficos y columnas: SVG y CSS propios. Tipografías: Archivo, Baloo 2, Instrument Serif e IBM Plex Mono (SIL Open Font License).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="19" r="9.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M7 32h30M12 38h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+        <circle cx="30.5" cy="12.5" r="2.5" fill="#D2622F"/>
+      </svg>
+      <div>
+        <p class="footer-title">CALAMA RESPIRA</p>
+        <p class="footer-sub">Un proyecto educativo independiente sobre el aire de Calama.</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>Datos SMA, SINCA y MMA · consulta 22.10.2026</p>
+      <p>No es un sistema oficial de alerta. Para decisiones de salud, sigue a la autoridad sanitaria.</p>
+      <p>Foto: Diego Delso / Wikimedia Commons, CC BY-SA 4.0.</p>
+    </div>
+    <a class="footer-top" href="#top">Volver arriba ↑</a>
+  </footer>
+
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="data/calama-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
