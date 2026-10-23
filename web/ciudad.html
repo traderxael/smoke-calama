@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calama en 3D · La ciudad y su aire, sector por sector</title>
+  <meta name="description" content="Modelo 3D del casco urbano de Calama construido con Blender a partir de las huellas de edificios de OpenStreetMap. Cada sector se colorea con la contaminación medida en su estación más cercana.">
+  <meta name="theme-color" content="#F6EFE3">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Baloo+2:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="city.css">
+</head>
+<body class="city-page">
+  <a class="skip-link" href="#mapa3d">Saltar al modelo 3D</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="19" r="9.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M7 32h30M12 38h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+        <circle cx="30.5" cy="12.5" r="2.5" fill="#D2622F"/>
+      </svg>
+      <span class="brand-type">CALAMA<span>EN 3D</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones">
+      <a href="#mapa3d">Modelo 3D</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#como">Cómo se hizo</a>
+      <a href="#descargas">Descargas</a>
+    </nav>
+    <div class="header-tools">
+      <a class="city-back" href="index.html">← Volver al mapa del aire</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="city-intro">
+      <div>
+        <p class="section-kicker"><span>3D</span> Blender + OpenStreetMap + SINCA</p>
+        <h1>Calama, edificio por edificio.</h1>
+      </div>
+      <div class="city-intro-copy">
+        <p>El casco urbano modelado en 3D con <strong>1.385 edificios</strong> extruidos desde sus huellas reales. Cada manzana pertenece al <strong>sector de la estación de monitoreo más cercana</strong> y toma el color de lo que esa estación midió en el instante que elijas.</p>
+        <p class="city-note">Es una <strong>estimación por cercanía</strong>, no una medición en cada edificio: sirve para ver cómo se reparte el problema, no para saber qué respira una casa en particular.</p>
+      </div>
+    </section>
+
+    <section class="city-stage" id="mapa3d" aria-labelledby="city-title">
+      <h2 class="sr-only" id="city-title">Modelo 3D de Calama con la contaminación por sector</h2>
+
+      <div class="city-controls">
+        <div class="seg" role="group" aria-label="Contaminante">
+          <button type="button" class="seg-btn is-on" data-pol="mp10" aria-pressed="true">MP10</button>
+          <button type="button" class="seg-btn" data-pol="mp25" aria-pressed="false">MP2,5</button>
+          <button type="button" class="seg-btn" data-pol="so2" aria-pressed="false">SO₂</button>
+        </div>
+        <div class="seg" role="group" aria-label="Fondo del mapa">
+          <button type="button" class="seg-btn" data-base="mapa" aria-pressed="false">Mapa</button>
+          <button type="button" class="seg-btn is-on" data-base="satelite" aria-pressed="true">Satélite</button>
+        </div>
+        <div class="seg" role="group" aria-label="Granularidad del tiempo">
+          <button type="button" class="seg-btn is-on" data-tmode="dia" aria-pressed="true">Día</button>
+          <button type="button" class="seg-btn" data-tmode="mes" aria-pressed="false">Mes</button>
+          <button type="button" class="seg-btn" data-tmode="anio" aria-pressed="false">Año</button>
+        </div>
+        <p class="city-frame" id="city-frame" aria-live="polite">—</p>
+        <button type="button" class="play-btn" id="city-play" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+          <span class="play-label">Animar</span>
+        </button>
+      </div>
+
+      <div id="map" role="region" aria-label="Modelo 3D interactivo de Calama: edificios coloreados según la estación de monitoreo más cercana. Arrastra para rotar, usa la rueda o los botones para acercar." tabindex="0"></div>
+      <div class="city-fallback" id="city-fallback" hidden>
+        <p>Este navegador no pudo dibujar el modelo 3D. Los datos por sector están en la lista de abajo y en la tabla de la página principal.</p>
+      </div>
+
+      <div class="city-legend" id="city-legend"></div>
+
+      <div class="city-slider">
+        <label class="sr-only" for="city-scrub">Instante mostrado en el modelo</label>
+        <input type="range" id="city-scrub" min="0" max="23" step="1" value="18" aria-valuetext="18:00">
+        <div class="city-slider-meta">
+          <span id="city-scrub-from">00:00</span>
+          <span id="city-scrub-to">23:00</span>
+        </div>
+      </div>
+
+      <aside class="city-panel" id="city-panel" aria-label="Valores por sector"></aside>
+    </section>
+
+    <section class="city-sectors" id="sectores" aria-labelledby="sect-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>01</span> Sectores</p>
+          <h2 id="sect-title">Cinco estaciones, cinco maneras de respirar.</h2>
+        </div>
+        <p class="section-lede">Cada edificio se asigna a la estación más cercana. El resultado no es un mapa de dispersión: es una forma honesta de repartir lo que ya se mide, sin inventar datos donde no hay sensores.</p>
+      </div>
+      <div class="city-sector-grid" id="city-sector-grid"></div>
+    </section>
+
+    <section class="city-how" id="como" aria-labelledby="how-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>02</span> Cómo se hizo</p>
+          <h2 id="how-title">De OpenStreetMap a Blender, y de ahí al navegador.</h2>
+        </div>
+        <p class="section-lede">Todo el flujo es reproducible con los scripts del repositorio. No hay un modelo comprado ni una malla inventada: la ciudad son sus huellas reales.</p>
+      </div>
+      <ol class="city-steps">
+        <li><span>01</span><div><h3>Huellas reales</h3><p>Se descargan los polígonos de edificios de OpenStreetMap para el casco urbano (15 mosaicos) y se filtran los menores a 18 m². Quedan 1.385 edificios.</p></div></li>
+        <li><span>02</span><div><h3>Alturas</h3><p>Se usa <code>height</code> o <code>building:levels</code> cuando existen; si no, una altura estimada por tipo (casa 4,5 m, galpón 8 m, hospital 14 m). Es una aproximación declarada, no un levantamiento.</p></div></li>
+        <li><span>03</span><div><h3>Blender + CAD</h3><p>Un script de Blender (headless) extruye cada huella, agrupa los edificios por sector y exporta un GLB de 1 MB. El mismo dataset genera un DXF con muros y techos como caras 3D para CAD.</p></div></li>
+        <li><span>04</span><div><h3>Color por sector</h3><p>En el navegador, MapLibre dibuja las extrusiones y colorea cada sector con el valor de su estación en el instante elegido, usando los mismos umbrales (OMS, norma anual y límite diario) del mapa principal. La altura se duplica solo en la vista, para que el volumen se lea a escala urbana.</p></div></li>
+      </ol>
+      <div class="city-links">
+        <a class="btn btn-ghost" href="https://github.com/traderxael/smoke-calama" target="_blank" rel="noopener">Código y scripts en GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Datos © OpenStreetMap (ODbL) ↗</a>
+        <a class="btn btn-ghost" href="index.html#metodologia">Metodología del mapa del aire</a>
+      </div>
+    </section>
+
+    <section class="city-downloads" id="descargas" aria-labelledby="dl-title">
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker"><span>03</span> Descargas</p>
+          <h2 id="dl-title">Llévate el modelo.</h2>
+        </div>
+        <p class="section-lede">Archivos abiertos para clase, maqueta o análisis. Los edificios conservan su material por sector, así que puedes recolorearlos con tus propios datos.</p>
+      </div>
+      <div class="city-dl-grid">
+        <a class="city-dl" href="assets/calama-city.glb" download>
+          <span class="city-dl-tag">GLB · 1,0 MB</span>
+          <h3>Modelo 3D</h3>
+          <p>Blender / three.js / Unity / cualquier visor glTF. 1.385 edificios, 6 materiales por sector.</p>
+          <span class="city-dl-cta">Descargar ↗</span>
+        </a>
+        <a class="city-dl" href="assets/calama-city.dxf" download>
+          <span class="city-dl-tag">DXF · 1,8 MB</span>
+          <h3>CAD</h3>
+          <p>Caras 3D de muros y techos en metros, listas para AutoCAD, QCAD o FreeCAD.</p>
+          <span class="city-dl-cta">Descargar ↗</span>
+        </a>
+        <a class="city-dl" href="data/calama-city.js" download>
+          <span class="city-dl-tag">JSON · 116 KB</span>
+          <h3>Datos</h3>
+          <p>Huellas simplificadas en metros locales, altura, sector y origen de proyección.</p>
+          <span class="city-dl-cta">Descargar ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer city-footer">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <circle cx="22" cy="19" r="9.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M7 32h30M12 38h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+          <circle cx="30.5" cy="12.5" r="2.5" fill="#D2622F"/>
+        </svg>
+        <div>
+          <p class="footer-title">CALAMA RESPIRA</p>
+          <p class="footer-sub">Un proyecto educativo independiente sobre el aire de Calama.</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Modelo: Blender 5.2 · Huellas: OpenStreetMap (ODbL) · Datos: SMA y SINCA</p>
+        <p>La asignación por sector es una estimación por cercanía, no una modelación de dispersión.</p>
+      </div>
+      <a class="footer-top" href="index.html">Volver al mapa del aire ↑</a>
+    </footer>
+  </main>
+
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="data/calama-data.js"></script>
+  <script src="data/calama-city.js"></script>
+  <script src="city.js"></script>
+</body>
+</html>

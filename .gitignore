@@ -41,3 +41,8 @@ research/pw/style-test.js
 research/pw/shot-card*.js
 research/pw/final-check.js
 research/pw/shots.js
+
+# Descargas temporales del modelo 3D
+research/city/osmapi-test.xml
+research/city/overpass-test.json
+research/city/tile-*.json

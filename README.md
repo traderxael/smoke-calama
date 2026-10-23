@@ -1,8 +1,8 @@
 # Smoke Calama
 
-Sitio educativo sobre la contaminación del aire en **Calama (Antofagasta, Chile)**: mapa 3D sobre el relieve real, columnas por estación que crecen con la concentración medida, animación del tiempo (hora, día, mes y año) con series oficiales, evidencia sobre el MP10 crónico, el polvo de los colegios y los **planes de tratamiento y recuperación** que hoy están vigentes o en trámite.
+Sitio educativo sobre la contaminación del aire en **Calama (Antofagasta, Chile)**: mapa 3D sobre el relieve real, columnas por estación que crecen con la concentración medida, animación del tiempo (hora, día, mes y año) con series oficiales, evidencia sobre el MP10 crónico, el polvo de los colegios, los **planes de tratamiento y recuperación** vigentes o en trámite y una página aparte con el **casco urbano modelado en 3D** (Blender + OpenStreetMap) que se colorea según la contaminación de cada sector.
 
-**Sitio publicado:** https://calama-respira-ztxwnernxw3.qoder.website
+**Sitio publicado:** https://calama-respira-ztxwnernxw3.qoder.website · **Modelo 3D:** https://calama-respira-ztxwnernxw3.qoder.website/ciudad.html
 
 ## Qué incluye
 
@@ -12,6 +12,7 @@ Sitio educativo sobre la contaminación del aire en **Calama (Antofagasta, Chile
 - **Modo para niños y modo técnico**: lenguaje, caras de estado del aire, analogías y un quiz de cuatro preguntas; el modo técnico muestra umbrales, cobertura y fuentes.
 - **Evidencia verificada**: promedios anuales 2021–2025 de la SMA/SINCA, inventario de emisiones 2016, MP2,5 contra norma y OMS, y el estudio de 2026 en 38 colegios.
 - **Planes de tratamiento y recuperación**: medidas provisionales R.E. 204/2024, nuevo PDA, PRAS/CRAS, franja arbórea y vivero, y el estado de cada instrumento. Ver [`docs/planes-de-recuperacion.md`](docs/planes-de-recuperacion.md).
+- **Calama en 3D** ([`web/ciudad.html`](web/ciudad.html)): 1.385 edificios extruidos desde sus huellas reales de OpenStreetMap con un script de Blender, coloreados por sector (estación más cercana) según el contaminante y el instante elegidos. Incluye descarga del modelo `.glb`, del plano CAD `.dxf` y del dataset. Ver [`docs/modelo-3d.md`](docs/modelo-3d.md).
 - Accesibilidad: foco visible, teclado completo (columnas, scrubber, ficha), `aria-live`, alternativas en tabla, `prefers-reduced-motion`, contraste AA verificado.
 
 ## Datos
@@ -24,17 +25,19 @@ Sitio educativo sobre la contaminación del aire en **Calama (Antofagasta, Chile
 | Normas y guías | D.S. 12/2022, D.S. 12/2011, D.S. 104/2018, guías OMS 2021 |
 | Colegios (38) | Zanetta-Colombo et al., *Environment International*, 2026 |
 | Medidas y planes | R.E. 204/2024, MMA; Primer Tribunal Ambiental; Contraloría (2026) |
+| Huellas de edificios (modelo 3D) | OpenStreetMap, consulta 22.10.2026 (ODbL) |
 
 La capa `web/data/calama-data.js` se genera con los scripts de `tools/` a partir de los archivos de `research/sinca/` y de los valores validados de los informes de la SMA. Los periodos se marcan como **validados** (SMA) o **preliminares** (SINCA) en el propio dato.
 
 ## Estructura
 
 ```
-web/                 sitio estático (index.html, styles.css, app.js, data/, vendor/, assets/)
-tools/               generación del dataset y parches de accesibilidad
+web/                 sitio estático (index.html, ciudad.html, styles.css, app.js, city.js, data/, vendor/, assets/)
+tools/               descarga y generación (datos, edificios, Blender, DXF, parches)
 research/sinca/      series crudas exportadas de SINCA
+research/city/       huellas crudas de OSM y dataset intermedio del modelo 3D
 research/pw/         arnés de verificación (Playwright + axe)
-docs/                notas de investigación (planes de recuperación)
+docs/                notas de investigación (planes de recuperación, modelo 3D)
 ```
 
 ## Ejecutar en local
@@ -59,6 +62,8 @@ node v2.js        # 72 checks de interacción, consola y responsive
 node v2-final.js  # teclado, 320 px, reduced-motion, enlaces e imágenes
 node a11y.js      # axe-core: 0 violaciones en 6 estados
 node contrast.js  # contraste por sección: 0 hallazgos
+node city.js      # página 3D: 25 checks (extrusiones, color por sector, descargas)
+node city-a11y.js # axe-core en la página 3D (escritorio y móvil)
 ```
 
 Los informes y capturas se escriben en `research/` (fuera del repositorio).
@@ -68,6 +73,7 @@ Los informes y capturas se escriben en `research/` (fuera del repositorio).
 - **Código**: MIT (ver `LICENSE`).
 - **Textos y visualizaciones propias**: CC BY-SA 4.0.
 - **Datos**: pertenecen a sus fuentes (SMA, SINCA/MMA, SINIA). Se reproducen con atribución y con la fecha de consulta.
+- **Modelo 3D y huellas**: datos © colaboradores de OpenStreetMap, **ODbL**; el GLB y el DXF derivados conservan esa licencia y atribución.
 - **Foto**: mina de Chuquicamata, Diego Delso / Wikimedia Commons, CC BY-SA 4.0.
 - **Mapa**: MapLibre GL JS (BSD-3); cartografía © OpenStreetMap (ODbL); imágenes © Esri y proveedores; relieve: Terrain Tiles de Mapzen (CC BY 4.0).
 - **Tipografías**: Archivo, Baloo 2, Instrument Serif, IBM Plex Mono (SIL OFL).
