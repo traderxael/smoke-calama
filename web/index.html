@@ -28,7 +28,10 @@
       </svg>
       <span class="brand-type">CALAMA<span>RESPIRA</span></span>
     </a>
-    <nav class="site-nav" aria-label="Secciones del sitio">
+    <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Secciones del sitio">
       <a href="#mapa">Mapa del aire</a>
       <a href="ciudad.html">Calama 3D</a>
       <a href="#pulso">Pulso</a>
@@ -573,5 +576,28 @@
   <script src="vendor/maplibre-gl.js"></script>
   <script src="data/calama-data.js"></script>
   <script src="app.js"></script>
+  <script>
+    (function() {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!btn || !nav) return;
+      function close() {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Abrir menú');
+        nav.classList.remove('is-open');
+      }
+      btn.addEventListener('click', function() {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      });
+      nav.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') close();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') close();
+      });
+    })();
+  </script>
 </body>
 </html>

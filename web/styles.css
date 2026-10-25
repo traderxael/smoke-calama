@@ -138,6 +138,22 @@ body[data-mode="kid"] em { font-family: inherit; font-style: normal; font-weight
 body[data-mode="kid"] .kid { display: inline; }
 body[data-mode="kid"] .tech { display: none; }
 
+/* ---------- 2b. Botón de menú móvil ---------- */
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  border-radius: var(--radius-pill);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  flex: none;
+  cursor: pointer;
+}
+.nav-toggle:hover { background: var(--paper-3); }
+
 /* ---------- 3. Header ---------- */
 .site-header {
   position: sticky;
@@ -1717,7 +1733,32 @@ button.source-row:hover { border-color: var(--copper); transform: translateX(2px
 }
 
 @media (max-width: 860px) {
-  .site-nav { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .site-nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 6px 14px 14px;
+    background: var(--paper-2);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    display: none;
+    z-index: 99;
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav a {
+    padding: 14px 12px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: 0;
+  }
+  .site-nav a:last-child { border-bottom: 0; }
   .header-tools { margin-left: auto; }
   .chart-emissions, .chart-pm25 { grid-column: span 12; }
   .map-legend { font-size: 12px; }
@@ -1742,6 +1783,8 @@ button.source-row:hover { border-color: var(--copper); transform: translateX(2px
   .map-topbar { top: 8px; left: 8px; right: 8px; }
   .time-dock { left: 8px; right: 8px; bottom: 8px; }
   .dock-frame { margin-left: auto; order: -1; width: auto; font-size: 14px; padding: 4px 10px; }
+  .time-dock .seg-btn { min-height: 40px; padding: 8px 13px; }
+  .time-dock select { min-height: 40px; }
   .dock-select-label { font-size: 9.5px; }
   .dock-select select { font-size: 12.5px; padding: 5px 8px; min-height: 30px; }
   .play-btn { flex: 0 0 auto; padding: 8px 13px 8px 9px; }
